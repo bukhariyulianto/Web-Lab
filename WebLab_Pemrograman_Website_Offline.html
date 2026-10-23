@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="id" data-edition="offline">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173c36">
+<meta name="description" content="Belajar pemrograman website melalui enam modul HTML, CSS, JavaScript DOM, lab kode interaktif, dan kuis berbasis praktik SITA.">
+<meta name="robots" content="noindex,nofollow">
+<title>WebLab — Pemrograman Website · Versi Offline</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNzNjMzYiLz48cGF0aCBkPSJtMjQgMjAtMTIgMTIgMTIgMTJtMTYtMjQgMTIgMTItMTIgMTJNMzYgMTVsLTggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2VmY2E2OCIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9zdmc+Cg==" type="image/svg+xml">
+<style>
+:root{--ink:#1e322e;--muted:#68746e;--green:#173c36;--green2:#2a5b4e;--lime:#e6edcf;--gold:#efca68;--paper:#f7f8f3;--white:#fff;--line:#e0e5dc;--soft:#eef2e9;--red:#9b3a32;--mono:'SFMono-Regular',Consolas,'Liberation Mono',monospace;--sans:Inter,'Segoe UI',Arial,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a,input,textarea,summary{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:default;opacity:.65}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b18620;outline-offset:4px}button{border:0}svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.skip{position:fixed;top:-60px;left:20px;padding:10px 18px;background:var(--gold);z-index:100}.skip:focus{top:10px}.topbar{height:82px;display:flex;align-items:center;gap:30px;padding:0 36px;border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:0;z-index:40}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:29px;letter-spacing:-1.5px;white-space:nowrap;line-height:1}.brandmark{width:39px;height:39px;border-radius:11px;background:var(--green);color:var(--gold);font-family:var(--mono);font-size:17px;letter-spacing:-2px;display:grid;place-items:center}.brandlight{font-weight:400}.branddot{color:#b7892d}.top-context{display:flex;align-items:center;gap:28px;font-size:10px;letter-spacing:1.6px;color:var(--muted);font-weight:650}.divider{height:26px;width:1px;background:var(--line)}.top-nav{display:flex;gap:25px;margin-left:auto;align-items:center;font-size:13px}.top-nav a{color:var(--muted);padding:29px 0;border-bottom:2px solid transparent}.top-nav a.active{color:var(--green);border-color:var(--green);font-weight:650}.top-nav a:hover{color:var(--green)}.workspace{font-size:11px;font-weight:600;border:1px solid var(--line);padding:7px 11px;border-radius:50px;white-space:nowrap;display:flex;align-items:center;gap:7px}.status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#438461}.menu-toggle{display:none;background:transparent;font-size:23px}.app-shell{display:flex;max-width:1640px;margin:auto}.sidebar{width:266px;flex:0 0 266px;background:#fff;border-right:1px solid var(--line);height:calc(100vh - 82px);position:sticky;top:82px;overflow:auto;padding:28px 20px 18px;display:flex;flex-direction:column}.sidebar-home{display:flex;align-items:center;gap:12px;padding:10px 13px;border-radius:8px;font-size:12px;color:var(--muted)}.sidebar-home:hover{background:var(--soft)}.sidebar-heading{display:flex;justify-content:space-between;font-size:9px;font-weight:700;letter-spacing:1.4px;color:#818b84;margin:34px 13px 14px}.chapter-link{display:flex;gap:11px;padding:13px 10px;border:1px solid transparent;border-radius:9px;margin-bottom:5px;align-items:center}.chapter-link:hover{background:var(--paper)}.chapter-link.active{background:#eef3e9;border-color:#e2ead8}.chapter-number{height:29px;width:29px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;font:11px var(--mono);color:var(--muted);display:grid;place-items:center}.chapter-link.active .chapter-number{background:var(--green);color:white;border-color:var(--green)}.chapter-link.done .chapter-number{background:var(--green);color:var(--gold);border-color:var(--green)}.chapter-info strong{font-size:12px;display:block;line-height:1.45;font-weight:600}.chapter-info small{font-size:10px;color:var(--muted)}.sidebar-project{margin:27px 8px 24px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:start;gap:12px}.project-icon{font:23px var(--mono);color:#8b9a75;white-space:nowrap}.sidebar-project strong{font-size:11px}.sidebar-project p{font-size:11px;color:var(--muted);margin:4px 0;line-height:1.6}.sidebar-progress{margin:0 7px;padding:16px 13px;background:var(--paper);border-radius:10px}.progress-label{display:flex;justify-content:space-between;gap:12px;font-size:11px}.progress-label strong{font-family:var(--mono)}progress{appearance:none;-webkit-appearance:none;height:6px;width:100%;border:none;border-radius:10px;overflow:hidden;background:#dfe7d7}progress::-webkit-progress-bar{background:#dfe7d7}progress::-webkit-progress-value{background:var(--green);border-radius:10px}progress::-moz-progress-bar{background:var(--green);border-radius:10px}.sidebar-progress p{font-size:10px;color:var(--muted);margin:6px 0 0}.sidebar-bottom{font-size:9px;color:#83917e;padding:23px 12px 0;margin-top:auto;display:flex;align-items:center;gap:8px}.tiny-icon{font-size:16px;color:#8a9d78}main{padding:34px 44px 48px;flex:1;min-width:0;outline:0} .eyebrow{font-size:10px;font-weight:700;letter-spacing:1.8px;display:flex;align-items:center;gap:8px;color:var(--green2)}.breadcrumb{font-size:11px;color:var(--muted);display:flex;gap:10px;align-items:center;margin-bottom:27px}.breadcrumb a:hover{text-decoration:underline}.welcome-line{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.welcome-line p{margin:0;font-size:12px;color:var(--muted)}.edition{font:10px var(--mono);color:var(--muted)}.hero{background:var(--green);border-radius:16px;min-height:298px;display:flex;position:relative;overflow:hidden;color:#fff;padding:34px 36px;gap:26px}.hero-copy{flex:1;z-index:1;min-width:0}.hero .eyebrow{color:var(--gold);font-size:9px}.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.14;font-weight:400;letter-spacing:-1.2px;margin:18px 0 13px}.hero h1 em{font-style:italic;color:#ecd590}.hero p{font-size:12px;line-height:1.8;color:#c7d9cf;max-width:370px;margin:0 0 23px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 19px;font-size:12px;font-weight:650;border-radius:7px;background:var(--green);color:white;line-height:1.4;border:1px solid transparent;text-decoration:none;min-height:42px;transition:background .15s,transform .15s}.btn:hover{background:var(--green2)}.btn svg{width:16px;height:16px}.btn.gold{background:var(--gold);color:var(--green)}.btn.gold:hover{background:#f5d782}.btn.secondary{background:white;color:var(--green);border:1px solid var(--line)}.btn.secondary:hover{background:var(--soft)}.btn.small{min-height:34px;padding:7px 12px;font-size:11px}.btn.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}.text-link{color:var(--green);font-size:12px;font-weight:650;display:inline-flex;align-items:center;gap:8px}.text-link:hover{text-decoration:underline}.hero-art{width:278px;flex-shrink:0;position:relative;align-self:center;min-height:232px;display:flex;align-items:center;justify-content:center}.orbit{border:1px solid #3d5b4f;border-radius:50%;position:absolute;width:280px;height:280px;transform:rotate(-17deg)}.orbit.two{width:210px;height:210px}.art-browser{width:235px;height:172px;background:#f6f6ec;color:var(--green);border:1px solid #d9dec9;border-radius:9px;transform:rotate(-5deg);box-shadow:14px 16px 0 #102e29;z-index:2}.art-toolbar{height:26px;border-bottom:1px solid #dadfcd;display:flex;align-items:center;gap:4px;padding:0 10px}.art-toolbar i{width:5px;height:5px;border-radius:50%;background:#c6cdb9}.art-toolbar span{margin-left:15px;font:7px var(--mono);color:#7b8975}.art-content{display:flex;padding:15px;gap:12px}.art-side{width:31px;display:flex;flex-direction:column;gap:8px}.art-side b{height:6px;background:#d0dbc2;border-radius:2px}.art-side b:first-child{background:var(--green)}.art-code{font:9px/1.85 var(--mono);flex:1}.art-code .tag{color:#9c6c32}.art-code .indent{padding-left:12px}.art-chip{position:absolute;z-index:3;background:var(--gold);color:var(--green);padding:9px 14px;border-radius:7px;font:10px var(--mono);right:-5px;bottom:17px;box-shadow:0 5px 15px #0002;transform:rotate(4deg)}.art-spark{position:absolute;right:8px;top:-3px;font-size:29px;color:var(--gold)}.hero-meta{display:flex;gap:24px;margin-top:19px;font-size:10px;color:#aebfb3}.hero-meta span{display:flex;gap:6px;align-items:center}.hero-meta svg{width:13px;height:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:white;border-radius:10px;margin:22px 0 33px}.stat{padding:16px 23px;display:flex;align-items:center;gap:14px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat-icon{width:37px;height:37px;border-radius:10px;background:var(--soft);color:var(--green2);display:grid;place-items:center}.stat strong{font:22px/1 var(--mono);letter-spacing:-1px}.stat span{display:block;color:var(--muted);font-size:10px;margin-top:4px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:17px}.section-title h2{font-size:20px;letter-spacing:-.6px;line-height:1.3;margin:0 0 5px;font-weight:650}.section-title p{font-size:11px;color:var(--muted);margin:0}.section-title .small-badge{font-size:10px;color:var(--muted);white-space:nowrap}.course-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.course-card{background:white;border:1px solid var(--line);border-radius:11px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}.course-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #183b2910}.card-body{padding:20px 19px 17px;flex:1}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.card-icon{width:37px;height:37px;background:#f0f0e3;border-radius:9px;display:grid;place-items:center;color:#5a6543}.course-card:nth-child(2n) .card-icon{background:#e9eee9;color:#376154}.course-card:nth-child(3n) .card-icon{background:#f7efda;color:#a38235}.chapter-kicker{font:9px var(--mono);letter-spacing:1px;color:var(--muted)}.course-card h3{font-size:14px;line-height:1.5;margin:0 0 7px;letter-spacing:-.2px}.course-card p{font-size:11px;color:var(--muted);line-height:1.7;margin:0}.card-footer{padding:12px 19px;border-top:1px solid #eff1ea;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:var(--muted)}.card-footer .arrow{font-size:18px;color:var(--green)}.home-bottom{margin-top:25px;padding:18px 23px;background:#ecefdf;border-radius:10px;display:flex;align-items:center;gap:17px}.home-bottom svg{width:28px;height:28px;color:#677751}.home-bottom p{margin:0;font-size:11px;color:#617056}.home-bottom strong{display:block;font-size:12px;color:var(--green);margin-bottom:3px}.home-bottom a{margin-left:auto;white-space:nowrap;font-size:11px}.footnote{margin-top:26px;display:flex;justify-content:space-between;font-size:9px;color:#7a857b;gap:16px}.page-heading{max-width:780px}.page-heading h1{font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:400;line-height:1.2;letter-spacing:-1px;margin:12px 0 14px}.page-heading p{font-size:13px;color:var(--muted);line-height:1.85;margin:0}.chapter-meta{display:flex;align-items:center;gap:18px;font-size:10px;color:var(--muted);margin:18px 0 24px}.tag-pill{background:#e8eddc;padding:4px 9px;border-radius:4px;color:#586545;font:9px var(--mono);letter-spacing:1px}.lesson-tabs{display:flex;border-bottom:1px solid var(--line);gap:28px;margin-bottom:28px}.lesson-tabs a{font-size:12px;color:var(--muted);padding:13px 3px;border-bottom:2px solid transparent;display:flex;align-items:center;gap:7px}.lesson-tabs a.active{color:var(--green);border-color:var(--green);font-weight:650}.lesson-tabs a span{font:9px var(--mono);background:var(--soft);padding:1px 5px;border-radius:4px}.lesson-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:30px}.lesson-article{min-width:0}.lesson-section{margin-bottom:27px}.lesson-section h2{font-size:16px;letter-spacing:-.35px;margin:0 0 10px;line-height:1.5}.lesson-section p{font-size:13px;color:#526259;line-height:1.9;margin:0}.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;padding:18px;background:#eff2e8;border-radius:10px;margin:0 0 28px}.flow-item{padding:10px 8px;background:#fff;border:1px solid #e1e6d7;border-radius:6px;position:relative}.flow-item strong{font:10px var(--mono);color:var(--green);display:block;overflow-wrap:anywhere}.flow-item span{font-size:10px;color:var(--muted);display:block;margin-top:3px}.callout{background:#f5efdd;border-left:3px solid #caac5e;padding:16px 19px;border-radius:0 8px 8px 0;font-size:12px;color:#6c5d3c;line-height:1.85;margin:24px 0}.callout strong{display:block;font-size:11px;margin-bottom:4px;color:#716037}.code-example{background:#172b28;border-radius:10px;overflow:hidden;margin:20px 0}.code-top{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #2c423c;color:#a8beb0;font:10px var(--mono)}.code-top button{background:transparent;color:#c1d2c5;font-size:10px;border:1px solid #486057;border-radius:4px;padding:3px 8px}.code-example pre{font:11px/1.9 var(--mono);color:#e1e9cc;overflow:auto;padding:18px;margin:0;tab-size:2;white-space:pre}.step-aside{position:sticky;top:106px;align-self:start}.target-card{border:1px solid var(--line);border-radius:10px;background:white;padding:19px 17px}.target-card .eyebrow{font-size:9px;margin-bottom:14px}.target-card p{font-size:11px;color:var(--muted);line-height:1.8}.milestone{display:flex;gap:9px;align-items:center;margin:14px 0;font-size:11px;color:var(--muted)}.milestone .circle{width:18px;height:18px;border:1px solid #ccd5c4;border-radius:50%;display:grid;place-items:center;font-size:10px;flex-shrink:0}.milestone.done{color:var(--green)}.milestone.done .circle{background:var(--green);border-color:var(--green);color:var(--gold)}.aside-note{font-size:10px;color:var(--muted);line-height:1.8;padding:15px 3px}.aside-note strong{display:block;color:#596a5c;font-size:10px}.aside-note a{display:block;border-bottom:1px solid var(--line);padding:8px 0;color:var(--green2)}.lesson-actions{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-top:27px}.lab-intro{display:flex;align-items:start;gap:14px;margin-bottom:20px}.lab-intro .card-icon{flex-shrink:0}.lab-intro h2{font-size:18px;margin:0 0 6px}.lab-intro p{font-size:12px;color:var(--muted);line-height:1.8;margin:0;max-width:720px}.lab-toolbar{display:flex;align-items:center;gap:9px;justify-content:space-between;margin-bottom:13px;flex-wrap:wrap}.lab-tools{display:flex;gap:7px}.lab-hint{font-size:11px;color:var(--muted);margin:14px 0}.lab-hint summary{cursor:pointer;font-weight:600;color:var(--green);padding:5px 0}.lab-hint p{margin:8px 0;padding:10px 14px;background:var(--soft);border-radius:6px}.sandbox-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:13px}.editor-pane{background:#152b27;border-radius:9px;overflow:hidden;min-width:0}.pane-title{font:10px var(--mono);padding:11px 15px;display:flex;justify-content:space-between;border-bottom:1px solid #31433b;color:#b8cabc;background:#1c342e}.pane-title small{font-size:9px;color:#8fa99a}.editor-wrap{display:flex;min-height:380px;position:relative}.line-numbers{user-select:none;font:11px/1.8 var(--mono);text-align:right;color:#718b7f;padding:15px 8px 15px 12px;overflow:hidden;max-height:420px;min-width:37px;white-space:pre}.editor-wrap textarea{font:11px/1.8 var(--mono);background:transparent;border:0;color:#e3eace;resize:vertical;min-height:380px;height:420px;width:100%;padding:15px 15px 15px 5px;tab-size:2;white-space:pre;overflow:auto;border-radius:0;outline-offset:-3px}.preview-pane{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:white;min-width:0}.preview-pane .pane-title{background:#eff2e9;border-color:var(--line);color:var(--muted)}iframe{display:block;width:100%;height:420px;border:0;background:#fff}.lab-results{border:1px solid var(--line);background:white;border-radius:9px;padding:17px 20px;margin-top:15px}.lab-results h3{font-size:12px;margin:0 0 9px}.lab-results p{font-size:11px;color:var(--muted);margin:0}.test-result{font-size:11px;display:flex;align-items:center;gap:9px;padding:4px 0}.test-result.pass{color:var(--green2)}.test-result.fail{color:var(--red)}.lab-help{font-size:10px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;margin-top:11px}.quiz-intro{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:22px}.quiz-intro h2{font-size:18px;margin:0 0 4px}.quiz-intro p{font-size:12px;color:var(--muted);margin:0}.quiz-score{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:11px 17px;font:20px var(--mono);white-space:nowrap}.question-card{background:white;border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:20px;min-width:0}.question-card legend{float:left;width:100%;font-size:14px;font-weight:650;line-height:1.6;margin:0 0 16px;padding:0}.question-card legend span{font:10px var(--mono);color:var(--muted);display:block;margin-bottom:5px}.question-options{clear:both;display:grid;gap:9px}.option{display:flex;align-items:center;gap:11px;cursor:pointer;border:1px solid var(--line);padding:11px 13px;border-radius:7px;font-size:12px;color:#526257;line-height:1.65}.option:hover{background:var(--paper)}.option input{accent-color:var(--green);margin:0}.option.chosen{border-color:var(--green);background:#f0f4e9}.option.correct{border-color:#8fae83;background:#edf4e6}.option.wrong{border-color:#c28e80;background:#fcf1ec}.option-letter{font:10px var(--mono);color:#71836d}.feedback{padding:13px 15px;font-size:12px;border-radius:7px;margin:13px 0 0;line-height:1.8;background:var(--soft);color:#406644}.feedback.wrong{background:#fbefe8;color:#8d4c3b}.feedback strong{display:block;font-size:11px;margin-bottom:2px}.quiz-hint{font-size:11px;color:var(--muted);margin-top:12px}.quiz-hint summary{cursor:pointer}.quiz-hint p{margin-bottom:0}.quiz-summary{padding:18px 22px;background:#eaf0df;border-radius:9px;display:flex;gap:15px;align-items:center;margin-bottom:18px}.quiz-summary p{font-size:12px;margin:0}.quiz-summary strong{display:block}.quiz-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.inline-message{font-size:12px;color:var(--red);margin:14px 0}.refs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:23px}.reference-card{background:white;border:1px solid var(--line);border-radius:9px;padding:19px;display:block}.reference-card:hover{border-color:#9eac91}.reference-card .ref-org{font:9px var(--mono);letter-spacing:1px;color:var(--muted);display:flex;justify-content:space-between}.reference-card h2{font-size:13px;margin:10px 0 8px}.reference-card p{font-size:11px;color:var(--muted);margin:0}.ref-domain{font:9px var(--mono);color:#809078;margin-top:12px;overflow-wrap:anywhere}.source-box{background:var(--green);color:white;padding:23px;border-radius:11px;margin:25px 0}.source-box .eyebrow{color:var(--gold)}.source-box p{font-size:12px;line-height:1.9;color:#c9d8c9;margin:10px 0}.source-box a{color:var(--gold);font-size:11px}.guide-block{background:white;border:1px solid var(--line);border-radius:10px;padding:25px;margin-top:20px}.guide-block h2{font-size:17px;margin:0 0 12px}.guide-block p,.guide-block li{font-size:12px;color:var(--muted);line-height:1.9}.guide-block ol,.guide-block ul{padding-left:21px}.guide-block strong{color:var(--ink)}.data-tools{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.danger{color:var(--red)!important}.checklist{list-style:none;padding:0!important}.checklist li{padding:6px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}.complete-banner{background:var(--green);color:white;border-radius:10px;padding:22px;margin:22px 0}.complete-banner h2{font-size:19px;margin:0 0 6px}.complete-banner p{font-size:12px;color:#ccdbc8;margin:0}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);padding:12px 20px;background:#203b30;color:white;border:1px solid #5a7760;box-shadow:0 4px 25px #0002;border-radius:9px;font-size:12px;z-index:200;opacity:0;pointer-events:none;transition:.2s;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}dialog{border:1px solid var(--line);border-radius:12px;padding:28px;max-width:440px;color:var(--ink)}dialog::backdrop{background:#10291f88}dialog h2{font-size:20px;margin:0 0 12px}dialog p{font-size:13px;color:var(--muted);line-height:1.8}dialog .data-tools{justify-content:end}.scrim{display:none}.nojs{padding:50px;background:white}.storage-warning{font-size:11px;padding:12px;background:#fbefda;border:1px solid #ead4aa;margin-bottom:20px;border-radius:7px}@media(min-width:1440px){main{padding:38px 54px 55px}.hero{padding:40px 45px}.hero h1{font-size:47px}.hero-art{width:320px}.hero p{max-width:450px;font-size:13px}.course-card h3{font-size:15px}.card-body{padding:23px}.hero{min-height:325px}}@media(max-width:1180px){.topbar{gap:23px;padding:0 25px}.top-context{display:none}main{padding:28px}.sidebar{width:240px;flex-basis:240px;padding:24px 13px}.hero-art{width:215px}.art-browser{width:205px}.hero{padding:29px;gap:10px}.hero h1{font-size:35px}.hero p{font-size:11px}.hero-meta{gap:13px}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-layout{grid-template-columns:minmax(0,1fr) 180px;gap:20px}.step-aside .target-card{padding:15px 13px}.sandbox-grid{grid-template-columns:1fr}.editor-wrap textarea{height:350px;min-height:300px}.editor-wrap{min-height:300px}.line-numbers{max-height:350px}iframe{height:260px}}@media(max-width:900px){.topbar{height:70px;gap:18px;padding:0 24px}.brand{font-size:26px}.brandmark{width:34px;height:34px;font-size:15px}.top-nav{gap:18px}.top-nav a{padding:22px 0}.workspace{display:none}.menu-toggle{display:block;margin-left:2px}.sidebar{display:none;position:fixed;z-index:60;top:70px;left:0;height:calc(100dvh - 70px);width:270px;padding:22px 18px}.sidebar.open{display:flex}.scrim.open{display:block;position:fixed;inset:70px 0 0;background:#122a2255;z-index:55}main{padding:28px;max-width:100%}.hero-art{width:270px}.hero h1{font-size:39px}.course-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{min-height:286px}.lesson-layout{grid-template-columns:minmax(0,1fr) 200px}.sandbox-grid{grid-template-columns:1.1fr 1fr}.editor-wrap textarea{height:400px}.line-numbers{max-height:400px}iframe{height:400px}.step-aside{top:90px}}@media(max-width:680px){.topbar{padding:0 17px;gap:12px;height:65px}.top-nav{gap:13px;margin-left:auto;font-size:11px}.top-nav a{padding:20px 0}.top-nav a:first-child{display:none}.brand{font-size:24px;gap:8px}.brandmark{width:31px;height:31px;font-size:14px}.menu-toggle{padding:0 2px;font-size:22px}.sidebar{top:65px;height:calc(100dvh - 65px)}.scrim.open{top:65px}main{padding:22px 18px 35px}.welcome-line{align-items:start;margin-bottom:13px}.welcome-line p{font-size:10px}.edition{font-size:8px}.hero{padding:28px 24px;display:block;border-radius:12px;min-height:0}.hero h1{font-size:35px;line-height:1.17;max-width:350px}.hero p{font-size:12px;max-width:100%;margin-bottom:20px}.hero-art{display:none}.hero-meta{gap:17px;margin-top:20px;flex-wrap:wrap;font-size:9px}.hero .eyebrow{font-size:8px}.stats{margin:16px 0 27px}.stat{padding:14px 8px;gap:8px;justify-content:center}.stat-icon{display:none}.stat strong{font-size:20px}.stat span{font-size:9px}.section-title h2{font-size:19px}.section-title p{font-size:10px}.course-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card-body{padding:16px 13px}.card-top{margin-bottom:15px}.card-icon{width:31px;height:31px}.card-icon svg{width:19px;height:19px}.chapter-kicker{font-size:8px}.course-card h3{font-size:12px;line-height:1.5}.course-card p{font-size:10px;line-height:1.7}.card-footer{padding:10px 13px;font-size:9px}.home-bottom{padding:16px;align-items:start;gap:10px;flex-wrap:wrap}.home-bottom svg{width:21px}.home-bottom p{flex:1;font-size:10px}.home-bottom a{margin-left:31px}.footnote{font-size:8px;flex-direction:column;gap:4px}.breadcrumb{font-size:10px;margin-bottom:23px;flex-wrap:wrap}.page-heading h1{font-size:31px}.page-heading p{font-size:12px}.chapter-meta{font-size:9px;gap:10px;flex-wrap:wrap}.lesson-tabs{gap:24px}.lesson-tabs a{font-size:11px}.lesson-layout{display:flex;flex-direction:column}.step-aside{position:static;order:-1}.target-card{padding:15px!important}.target-card>p,.target-card>.eyebrow{display:none}.milestones{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}.milestone{font-size:10px;margin:0}.target-card .progress-label{margin-top:12px;font-size:10px}.aside-note{display:none}.flow{padding:12px;gap:6px}.flow-item{padding:8px}.flow-item strong{font-size:9px}.flow-item span{font-size:9px}.lesson-section h2{font-size:16px}.lesson-section p{font-size:12px}.callout{font-size:11px;padding:14px 16px}.code-example pre{font-size:10px;padding:14px}.sandbox-grid{grid-template-columns:1fr}.editor-wrap textarea{font-size:11px;height:340px}.line-numbers{max-height:340px}iframe{height:290px}.lab-tools{gap:5px}.btn{font-size:11px;padding:10px 15px}.btn.small{font-size:10px;padding:7px 9px}.lab-toolbar .btn{padding:9px 12px}.lab-help{flex-direction:column;gap:4px;font-size:9px}.lab-intro h2{font-size:17px}.lab-intro p{font-size:11px}.quiz-intro h2{font-size:17px}.quiz-intro p{font-size:11px}.quiz-score{font-size:18px;padding:9px 12px}.question-card{padding:18px 15px}.question-card legend{font-size:13px}.option{font-size:11px;padding:10px;gap:8px}.feedback{font-size:11px}.refs-grid{grid-template-columns:1fr}.guide-block{padding:20px}.source-box{padding:20px}.lesson-actions{gap:10px}.lesson-actions .btn{flex:1}.quiz-summary{padding:15px}.quiz-summary p{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}@media print{.topbar,.sidebar,.lesson-tabs,.step-aside,.toast,.lesson-actions{display:none}main{padding:0}.app-shell{display:block}body{background:white}.code-example{background:#f3f3f3}.code-example pre{color:black}.code-top{color:black}.hero{background:#fff;color:black}.hero p{color:#333}.hero-art{display:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Lewati navigasi</a>
+<header class="topbar">
+ <a class="brand" href="#/" aria-label="WebLab beranda"><span class="brandmark">&lt;/&gt;</span><span>web<span class="brandlight">lab</span><span class="branddot">.</span></span></a>
+ <div class="top-context"><span class="divider"></span><span>PEMROGRAMAN WEBSITE</span></div>
+ <nav class="top-nav" aria-label="Navigasi portal"><a href="#/" data-route="home">Ruang belajar</a><a href="#/referensi" data-route="referensi">Referensi <span aria-hidden="true">↗</span></a><a href="#/panduan" data-route="panduan">Panduan</a></nav>
+ <span class="workspace"><span class="status-dot"></span>Versi offline</span>
+ <button class="menu-toggle" id="menu-toggle" aria-label="Buka daftar bab" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+<div class="app-shell">
+ <div class="scrim" id="scrim"></div>
+ <aside class="sidebar" id="sidebar" aria-label="Daftar bab">
+  <a href="#/" class="sidebar-home">⌂ <span>Ikhtisar pembelajaran</span></a>
+  <div class="sidebar-heading"><span>JALUR BELAJAR</span><span>01 — 06</span></div>
+  <nav id="chapter-nav" aria-label="Navigasi bab"></nav>
+  <div class="sidebar-project"><span class="project-icon">{ }</span><div><strong>Satu studi kasus.</strong><p>Enam langkah membangun antarmuka SITA.</p></div></div>
+  <div id="sidebar-progress" class="sidebar-progress"></div>
+  <div class="sidebar-bottom"><span class="tiny-icon">◈</span> Belajar pelan, bangun sampai paham.</div>
+ </aside>
+ <main id="main" tabindex="-1"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="dialog-root"></div>
+<noscript><p class="nojs">Aktifkan JavaScript untuk membuka modul, lab kode, kuis, dan progres belajar.</p></noscript>
+<script>
+// Materi diadaptasi dari transkrip 0CMyC-Dkd5I.txt; contoh disusun ulang untuk belajar.
+window.REFERENCES = [
+ {id:'html', title:'Struktur dan sintaks HTML', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax', note:'Elemen, atribut, dan struktur dokumen HTML.'},
+ {id:'css', title:'Memulai CSS', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started', note:'Menghubungkan stylesheet, memilih elemen, dan menulis deklarasi.'},
+ {id:'script', title:'Elemen script', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script', note:'Pemanggilan JavaScript eksternal dan atribut defer.'},
+ {id:'dom', title:'Pengantar DOM scripting', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting', note:'Membaca dan mengubah dokumen dari JavaScript.'},
+ {id:'forms', title:'Validasi form di browser', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation', note:'required, tipe input, dan validasi khusus.'},
+ {id:'find', title:'Array.prototype.find()', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find', note:'Mencari elemen pertama yang memenuhi kondisi.'},
+ {id:'create', title:'Document.createElement()', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement', note:'Membuat elemen baru melalui DOM.'},
+ {id:'text', title:'Node.textContent', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent', note:'Memasang teks biasa ke elemen, tanpa menafsirkannya sebagai HTML.'},
+ {id:'hours', title:'Date.getHours()', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours', note:'Mendapatkan jam lokal perangkat, dari 0 hingga 23.'},
+ {id:'progress', title:'Elemen progress', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress', note:'Menampilkan kemajuan dengan value dan max.'},
+ {id:'session', title:'Window.sessionStorage', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage', note:'Penyimpanan per origin dan sesi tab browser.'},
+ {id:'local', title:'Window.localStorage', org:'MDN Web Docs', url:'https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage', note:'Penyimpanan lokal yang dapat bertahan setelah halaman dimuat ulang.'},
+ {id:'auth', title:'Authentication Cheat Sheet', org:'OWASP', url:'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html', note:'Rujukan lanjutan untuk autentikasi aplikasi nyata.'},
+ {id:'validation', title:'Input Validation Cheat Sheet', org:'OWASP', url:'https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html', note:'Pemeriksaan di browser tetap perlu diulang di server.'}
+];
+const q = (question, options, correct, feedback, hint) => ({question,options,correct,feedback,hint});
+window.COURSE = [
+ {
+ id:1, icon:'structure', tag:'HTML', title:'Fondasi & struktur HTML', short:'Fondasi & HTML', duration:20, range:'01:10–04:39', objective:'Menyusun halaman semantik dan memahami peran setiap file proyek.',
+ intro:'Sebuah aplikasi dimulai dari struktur yang jelas. Di praktik SITA, empat halaman membagi pekerjaan: masuk, dashboard, pelacakan, dan stok bahan ajar.',
+ sections:[
+  {title:'Peta proyek: beri setiap file satu peran',text:'index.html menjadi pintu masuk; dashboard.html merangkum aktivitas; tracking.html menampilkan pengiriman; stock.html mengelola stok. Gunakan nama stock.html atau stok.html secara konsisten pada file dan tautannya. Transkrip menyebut kedua ejaan.'},
+  {title:'HTML memberi makna pada isi',text:'header untuk pengantar, nav untuk navigasi, main untuk isi utama, section untuk kelompok bertema, dan footer untuk penutup. Judul h1 menjelaskan tujuan halaman. Semantik membantu manusia dan perangkat bantu membaca struktur.'},
+  {title:'Jalur file adalah alamat relatif',text:'Dari index.html, css/style.css berarti masuk ke folder css lalu membaca style.css. img/buku.jpeg harus cocok dengan nama, huruf besar-kecil, dan ekstensi file aslinya. Inilah penyebab sampul yang rusak dalam demonstrasi.'}
+ ],
+ visual:[['index.html','Pintu masuk'],['dashboard.html','Ringkasan'],['tracking.html','Pelacakan'],['stock.html','Data stok']],
+ fact:'Nama index.html adalah kebiasaan konfigurasi server sebagai halaman awal, bukan aturan sintaks HTML yang berlaku untuk semua server.',
+ code:`<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stok bahan ajar\x3c/title>
+  <link rel="stylesheet" href="css/style.css">
+  \x3cscript src="js/data.js" defer><\/script>
+  \x3cscript src="js/script.js" defer><\/script>
+\x3c/head>
+<body>
+  <header><h1>Stok bahan ajar\x3c/h1>\x3c/header>
+  <nav aria-label="Utama"><a href="dashboard.html">Dashboard\x3c/a>\x3c/nav>
+  <main><section><h2>Daftar buku\x3c/h2><p>Data simulasi.\x3c/p>\x3c/section>\x3c/main>
+  <footer>Praktikum web\x3c/footer>
+\x3c/body>
+\x3c/html>`,
+ refs:['html','script'],
+ lab:{title:'Beri makna pada halaman',task:'Ubah pembungkus id="konten" menjadi main. Tambahkan satu h1 berisi “Stok bahan ajar” di dalamnya. Pertahankan paragraf yang sudah ada.',hint:'Tag pembuka dan penutup harus berpasangan. Letakkan <h1> di dalam <main id="konten">.',
+ start:`\x3c!-- Ubah div menjadi main, lalu tambahkan h1 -->
+<div id="konten">
+  <p>Kelola bahan ajar untuk mahasiswa.\x3c/p>
+\x3c/div>`,
+ solution:`<main id="konten">
+  <h1>Stok bahan ajar\x3c/h1>
+  <p>Kelola bahan ajar untuk mahasiswa.\x3c/p>
+\x3c/main>`,
+ tests:`check('Pembungkus konten memakai main', document.querySelector('main#konten') !== null);
+check('Judul utama sesuai dan berada di dalam main', document.querySelector('main#konten h1')?.textContent.trim() === 'Stok bahan ajar');
+check('Paragraf awal tetap ada', document.querySelector('main#konten p')?.textContent.includes('Kelola bahan ajar'));`},
+ quiz:[
+ q('Anda ingin menandai isi utama unik sebuah halaman. Elemen mana yang paling sesuai?', ['<main>','<footer>','<nav>','<aside>'],0,['main menandai isi utama halaman.','footer menandai informasi penutup.','nav menandai kumpulan tautan navigasi.','aside menandai isi tambahan yang berkaitan secara tidak langsung.'],'Pilih elemen yang menjelaskan peran isi, bukan letaknya.'),
+ q('File asli bernama img/paud.jpeg, tetapi data memakai img/paud.jpg. Perbaikan pertama yang tepat?', ['Menghapus tag gambar','Mengubah path menjadi img/paud.jpeg','Mengganti semua gambar menjadi PNG','Memindahkan CSS ke dalam HTML'],1,['Menghapus gambar menyembunyikan gejala, bukan memperbaiki alamatnya.','Path kini cocok dengan nama dan ekstensi file asli.','Konversi semua gambar tidak diperlukan untuk memperbaiki satu path.','Lokasi CSS tidak memperbaiki nama file gambar.'],'Bandingkan alamat yang diminta dengan nama file yang tersedia.')]
+ },
+ {
+ id:2,icon:'palette',tag:'CSS',title:'CSS & tata letak responsif',short:'CSS & tata letak',duration:25,range:'03:03–05:23',objective:'Memisahkan tampilan dari struktur dan membuat komponen yang menyesuaikan ruang.',
+ intro:'Setelah struktur terbaca, CSS menyusun hierarki visual. Gunakan warna, jarak, dan tata letak untuk membantu mahasiswa menemukan informasi.',
+ sections:[
+ {title:'Tiga cara, satu bahasa',text:'External CSS ada di file .css dan dihubungkan melalui link. Internal CSS berada di elemen style pada HTML. Inline CSS berada di atribut style. Transkrip memakai ketiganya untuk demonstrasi; untuk proyek yang tumbuh, stylesheet eksternal membantu pemeliharaan.'},
+ {title:'Selector → properti → nilai',text:'Selector .kartu memilih elemen dengan class kartu. Deklarasi padding: 16px memberi ruang di dalam batas elemen, sedangkan margin memberi ruang di luar. Warna dan tipografi sebaiknya membantu keterbacaan, bukan sekadar dekorasi.'},
+ {title:'Susun ulang saat ruang menyempit',text:'Gunakan grid untuk susunan kartu, lalu media query untuk layar kecil. Jangan mengunci semua lebar dengan piksel. Tambahkan meta viewport pada dokumen agar tata letak seluler mengikuti lebar perangkat.'}
+ ],
+ visual:[['HTML','Struktur'],['CSS','Presentasi'],['Media query','Adaptasi']],fact:'CSS eksternal, internal, dan inline dapat digunakan, tetapi hasil akhirnya mengikuti cascade; aturan yang “ditulis terakhir” tidak selalu menang.',
+ code:`/* css/style.css */
+:root { --biru: #183b56; --emas: #f4c84a; }
+body { margin: 0; font-family: system-ui, sans-serif; }
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.kartu { padding: 16px; border: 1px solid #ccd3db; }
+@media (max-width: 640px) {
+  .ringkasan { grid-template-columns: 1fr; }
+}`,
+ refs:['css'],
+ lab:{title:'Susun dua kartu dengan Grid',task:'Pada aturan .ringkasan, ganti display menjadi grid, isi grid-template-columns dengan 1fr 1fr, lalu atur gap menjadi 16px.',hint:'Ketiga deklarasi ditulis di dalam selector .ringkasan. Satuan px dibutuhkan untuk gap.',
+ start:`<style>
+.ringkasan {
+  display: block; /* TODO: grid */
+  grid-template-columns: none; /* TODO: 1fr 1fr */
+  gap: 0; /* TODO: 16px */
+}
+.kartu { background: #e8f1ee; padding: 16px; border-radius: 8px; }
+\x3c/style>
+<div class="ringkasan">
+  <div class="kartu">5 judul buku\x3c/div>
+  <div class="kartu">2 pengiriman\x3c/div>
+\x3c/div>`,
+ solution:`<style>
+.ringkasan { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.kartu { background: #e8f1ee; padding: 16px; border-radius: 8px; }
+\x3c/style>
+<div class="ringkasan">
+  <div class="kartu">5 judul buku\x3c/div>
+  <div class="kartu">2 pengiriman\x3c/div>
+\x3c/div>`,
+ tests:`const el=document.querySelector('.ringkasan'); const css=el ? getComputedStyle(el) : null;
+check('Tata letak menggunakan grid', css?.display === 'grid');
+check('Ada dua kolom dan dua kartu', css?.gridTemplateColumns.split(' ').length === 2 && el?.children.length === 2);
+check('Jarak antarkartu 16px', css?.columnGap === '16px' && css?.rowGap === '16px');`},
+ quiz:[
+ q('Anda ingin mengubah tampilan empat halaman sekaligus dari satu tempat. Pilihan yang paling mudah dirawat?', ['Menyalin atribut style ke semua elemen','Mengulang tag style pada tiap halaman','Menghubungkan semua halaman ke style.css','Menghapus semua class HTML'],2,['Atribut yang disalin harus diperbarui berulang kali.','Aturan yang diduplikasi perlu diubah di beberapa halaman.','Satu stylesheet bersama membuat perubahan tampilan terpusat.','Class membantu pemilihan elemen; menghapusnya tidak memusatkan aturan.'],'Pikirkan berapa file yang perlu diedit saat warna berubah.'),
+ q('Bagian mana yang memberi jarak di dalam batas sebuah kartu?', ['margin','padding','color','font-weight'],1,['margin memberi jarak di luar batas elemen.','padding memberi jarak antara isi dan batas elemen.','color mengatur warna teks.','font-weight mengatur ketebalan huruf.'],'Bayangkan ruang antara teks dan tepi kartu.')]
+ },
+ {
+ id:3,icon:'code',tag:'JAVASCRIPT',title:'Data, DOM & debugging',short:'Data & JavaScript DOM',duration:30,range:'06:57–08:39',objective:'Mengubah data menjadi elemen dan menelusuri penyebab error secara sistematis.',
+ intro:'JavaScript menghubungkan data dan antarmuka. Saat tombol tidak bereaksi, cari penyebab pertama di Console sebelum mengganti banyak bagian kode.',
+ sections:[
+ {title:'Pisahkan data dari perilaku',text:'data.js dapat berisi array buku dan objek pengiriman. script.js memuat fungsi dan event listener. Untuk script klasik dengan defer, letakkan data.js lebih dahulu agar deklarasinya tersedia ketika script.js dijalankan.'},
+ {title:'DOM adalah representasi halaman',text:'Pilih elemen dengan querySelector, buat elemen dengan createElement, lalu pasang teks dengan textContent. append menambahkan elemen ke induknya. Untuk judul dari pengguna, textContent memperlakukannya sebagai teks biasa.'},
+ {title:'Gunakan error sebagai petunjuk',text:'Dalam transkrip, file data.js masih berisi tag script sehingga terjadi SyntaxError. File .js eksternal cukup berisi kode JavaScript. Buka DevTools → Console, baca file dan baris error pertama, perbaiki satu penyebab, lalu muat ulang. Periksa tab Network untuk file yang gagal dimuat.'}
+ ],
+ visual:[['data.js','Sumber data'],['script.js','Logika & event'],['DOM','Tampilan']],fact:'Tag \x3cscript> berada di dokumen HTML untuk memuat JavaScript. Pembungkus tag itu tidak ditulis di dalam file .js eksternal.',
+ code:`// data.js — tanpa tag \x3cscript>
+const buku = [
+  { kode: 'WEB101', judul: 'Dasar Pemrograman Web', stok: 12 }
+];
+
+// script.js — dijalankan setelah data dan DOM siap
+const daftar = document.querySelector('#daftar');
+for (const item of buku) {
+  const li = document.createElement('li');
+  li.textContent = item.judul;
+  daftar.append(li);
+}`,
+ refs:['script','dom','create','text'],
+ lab:{title:'Render judul dari data',task:'Perbaiki dua baris TODO: isi teks li dengan item.judul, lalu tambahkan li ke elemen daftar. Hasil harus menampilkan dua buku.',hint:'Gunakan li.textContent = item.judul dan daftar.append(li) di dalam perulangan.',
+ start:`<h2>Bahan ajar\x3c/h2>
+<ul id="daftar">\x3c/ul>
+\x3cscript>
+const buku = [{judul: 'Dasar HTML'}, {judul: 'Dasar CSS'}];
+const daftar = document.querySelector('#daftar');
+for (const item of buku) {
+  const li = document.createElement('li');
+  li.textContent = ''; // TODO: ambil judul
+  // TODO: tambahkan li ke daftar
+}
+<\/script>`,
+ solution:`<h2>Bahan ajar\x3c/h2>
+<ul id="daftar">\x3c/ul>
+\x3cscript>
+const buku = [{judul: 'Dasar HTML'}, {judul: 'Dasar CSS'}];
+const daftar = document.querySelector('#daftar');
+for (const item of buku) {
+  const li = document.createElement('li');
+  li.textContent = item.judul;
+  daftar.append(li);
+}
+<\/script>`,
+ tests:`const items=[...document.querySelectorAll('#daftar li')];
+check('Dua elemen li terbentuk', items.length === 2);
+check('Judul HTML berasal dari data', items[0]?.textContent === 'Dasar HTML');
+check('Judul CSS berasal dari data', items[1]?.textContent === 'Dasar CSS');`},
+ quiz:[
+ q('Console menunjukkan SyntaxError pada karakter “<” di awal data.js. Baris pertama berisi \x3cscript>. Apa yang dilakukan?', ['Menghapus pembungkus \x3cscript> dari data.js','Menghapus seluruh data buku','Memindahkan data.js ke folder gambar','Mengubah semua const menjadi var'],0,['File JavaScript eksternal tidak memakai pembungkus tag HTML.','Data yang benar tidak perlu dihapus karena pembungkusnya salah.','Memindahkan file tidak mengubah sintaksnya.','Mengganti deklarasi variabel tidak menghapus tag HTML yang menyebabkan error.'],'Periksa apakah isi file cocok dengan jenis file tersebut.'),
+ q('Judul buku dari input mahasiswa ingin ditampilkan sebagai teks biasa. Properti yang tepat?', ['innerHTML','textContent','outerHTML','src'],1,['innerHTML menafsirkan string sebagai markup HTML.','textContent memasang judul sebagai teks biasa.','outerHTML mengganti representasi markup elemen.','src adalah alamat sumber, bukan isi teks elemen.'],'Pilih API yang tidak menafsirkan tag dari masukan sebagai markup.')]
+ },
+ {
+ id:4,icon:'login',tag:'FORM & EVENT',title:'Login simulasi & dashboard',short:'Login & dashboard',duration:30,range:'05:23–06:57; 08:39–13:29',objective:'Menangani form, mencocokkan data demo, dan membuat sapaan berdasarkan waktu.',
+ intro:'Form adalah percakapan: mahasiswa mengirim data, aplikasi memeriksa, lalu memberi respons yang jelas. Di sini kita melatih alurnya dengan akun fiktif.',
+ sections:[
+ {title:'Tangani submit, bukan hanya klik',text:'Pasangkan label dengan input. type="email" dan required membantu pemeriksaan awal. Dengarkan event submit dan gunakan preventDefault agar halaman tidak langsung dimuat ulang. Cocokkan email serta sandi demo, lalu tampilkan pesan keberhasilan atau kegagalan.'},
+ {title:'Dashboard menyatukan konteks',text:'Gunakan new Date().getHours() untuk memilih sapaan menurut jam lokal perangkat. Ringkasan stok dapat dihitung dari array. Menu laporan bisa memakai details/summary, sedangkan informasi lupa sandi dapat ditampilkan melalui dialog yang juga bisa ditutup dengan keyboard.'},
+ {title:'Pahami batas simulasi',text:'Transkrip memakai sessionStorage untuk nama pengguna. Penyimpanan ini bertahan saat reload dalam sesi tab, tetapi bukan bukti autentikasi. Sandi di file JavaScript dapat dibaca pengunjung. Aplikasi nyata memerlukan verifikasi server, penyimpanan sandi yang sesuai, dan pengelolaan sesi.'}
+ ],
+ visual:[['Form','Input'],['Validasi','Keputusan'],['Dashboard','Umpan balik']],fact:'Validasi di browser memudahkan pengguna. Pemeriksaan data tetap diperlukan di server pada aplikasi nyata karena kode browser dapat diubah.',
+ code:`// Contoh pembelajaran, bukan sistem autentikasi produksi
+const pengguna = [{ email: 'demo@example.com', sandi: 'belajar123', nama: 'Mahasiswa' }];
+function cocokkan(email, sandi) {
+  return pengguna.find(u => u.email === email && u.sandi === sandi);
+}
+const jam = new Date().getHours();
+const sapaan = jam < 12 ? 'Selamat pagi'
+  : jam < 15 ? 'Selamat siang'
+  : jam < 18 ? 'Selamat sore' : 'Selamat malam';
+// Contoh sesi tab pada proyek lokal biasa:
+// sessionStorage.setItem('nama', 'Mahasiswa');
+// document.querySelector('#sapaan').textContent = sapaan;`,
+ refs:['forms','find','hours','session','auth','validation'],
+ lab:{title:'Cocokkan kedua nilai',task:'Perbaiki fungsi validasi agar hanya mengembalikan true ketika email DAN sandi sama dengan akun demo. Klik “Jalankan & periksa”, lalu coba form pada pratinjau.',hint:'Gunakan operator === untuk membandingkan dan && untuk mengharuskan kedua kondisi benar.',
+ start:`<h2>Login demo\x3c/h2>
+<p>Akun fiktif: demo@example.com / belajar123\x3c/p>
+<form id="login">
+  <label>Email <input id="email" type="email" required>\x3c/label>
+  <label>Sandi <input id="sandi" type="password" required>\x3c/label>
+  <button>Masuk\x3c/button>
+\x3c/form>
+<p id="pesan" role="status">\x3c/p>
+\x3cscript>
+function validasi(email, sandi) {
+  return email === 'demo@example.com'; // TODO: periksa sandi juga
+}
+document.querySelector('#login').addEventListener('submit', e => {
+  e.preventDefault();
+  const ok = validasi(document.querySelector('#email').value.trim(), document.querySelector('#sandi').value);
+  document.querySelector('#pesan').textContent = ok ? 'Login demo berhasil' : 'Email atau sandi salah';
+});
+<\/script>`,
+ solution:`<h2>Login demo\x3c/h2>
+<p>Akun fiktif: demo@example.com / belajar123\x3c/p>
+<form id="login">
+  <label>Email <input id="email" type="email" required>\x3c/label>
+  <label>Sandi <input id="sandi" type="password" required>\x3c/label>
+  <button>Masuk\x3c/button>
+\x3c/form>
+<p id="pesan" role="status">\x3c/p>
+\x3cscript>
+function validasi(email, sandi) {
+  return email === 'demo@example.com' && sandi === 'belajar123';
+}
+document.querySelector('#login').addEventListener('submit', e => {
+  e.preventDefault();
+  const ok = validasi(document.querySelector('#email').value.trim(), document.querySelector('#sandi').value);
+  document.querySelector('#pesan').textContent = ok ? 'Login demo berhasil' : 'Email atau sandi salah';
+});
+<\/script>`,
+ tests:`check('Akun demo yang tepat diterima', validasi('demo@example.com', 'belajar123') === true);
+check('Sandi salah ditolak', validasi('demo@example.com', 'salah') === false);
+check('Email salah ditolak', validasi('lain@example.com', 'belajar123') === false);
+const form=document.querySelector('#login'); document.querySelector('#email').value='demo@example.com'; document.querySelector('#sandi').value='belajar123'; form.dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}));
+check('Form menampilkan umpan balik', document.querySelector('#pesan').textContent === 'Login demo berhasil');`},
+ quiz:[
+ q('Email benar tetapi sandi salah. Dengan kondisi emailCocok && sandiCocok, apa hasilnya?', ['true karena email benar','false karena salah satu kondisi salah','true karena sandi tidak diperiksa','undefined untuk semua input'],1,['Operator && membutuhkan kedua kondisi bernilai benar.','Satu kondisi salah membuat hasil gabungan false.','Sandi tetap ikut diperiksa dalam kondisi gabungan.','Perbandingan boolean ini menghasilkan true atau false.'],'&& meminta semua syarat terpenuhi.'),
+ q('Mengapa menyimpan nama di sessionStorage tidak cukup untuk melindungi dashboard produksi?', ['Nama terlalu pendek','Data selalu hilang saat reload','Storage dapat diubah pengguna dan bukan verifikasi server','Storage hanya menyimpan angka'],2,['Panjang nama tidak menentukan keabsahan sesi.','sessionStorage dapat bertahan saat reload dalam sesi tab.','Data browser dapat dimodifikasi; server harus memverifikasi hak akses.','Storage menyimpan nilai sebagai string, termasuk nama.'],'Siapa yang mengendalikan data di browser?')]
+ },
+ {
+ id:5,icon:'tracking',tag:'OBJEK & KONDISI',title:'Pelacakan & konsistensi data',short:'Tracking pengiriman',duration:25,range:'13:29–18:02',objective:'Menangani hasil pencarian, memetakan status, dan menjaga nomor DO tetap konsisten.',
+ intro:'Pelacakan yang baik menjawab tiga hal: paket mana, sudah sampai mana, dan bagaimana riwayatnya. Semua tampilan harus berasal dari data yang sama.',
+ sections:[
+ {title:'Gunakan nomor sebagai kunci',text:'Simpan nomor DO sebagai string untuk mempertahankan angka nol di awal. Pangkas spasi dari input dengan trim(). Cari objek berdasarkan kunci; jika tidak ada, tampilkan pesan yang jelas dan bersihkan hasil sebelumnya.'},
+ {title:'Status memiliki representasi visual',text:'Buat pemetaan eksplisit: Diproses → 25, Dalam perjalanan → 65, Terkirim → 100. Angka ini adalah konvensi latihan, bukan jarak atau estimasi pengiriman nyata. Gunakan progress dengan label agar makna tidak hanya disampaikan lewat warna.'},
+ {title:'Satu sumber kebenaran',text:'Transkrip menunjukkan data kedua masih memuat nomor DO pertama. Kurangi duplikasi: gunakan kunci pencarian sebagai nomor yang ditampilkan, atau validasi kesesuaian kunci dan properti. Riwayat perjalanan dapat dibuat dengan perulangan dan createElement.'}
+ ],
+ visual:[['Nomor DO','Cari objek'],['Status','Petakan nilai'],['Riwayat','Buat timeline']],fact:'Array.find() menghasilkan elemen pertama yang cocok atau undefined jika tidak ada. Jika data berupa objek berkunci nomor DO, gunakan akses data[nomor].',
+ code:`const pengiriman = {
+  '2023001234': { penerima: 'Mahasiswa A', status: 'Dalam perjalanan' },
+  '2023005678': { penerima: 'Mahasiswa B', status: 'Terkirim' }
+};
+const persentase = { 'Diproses': 25, 'Dalam perjalanan': 65, 'Terkirim': 100 };
+function cariDO(nomor) {
+  const kunci = nomor.trim();
+  const paket = Object.hasOwn(pengiriman, kunci) ? pengiriman[kunci] : undefined;
+  if (!paket) return { pesan: 'Nomor DO tidak ditemukan' };
+  return { nomor: kunci, ...paket, progres: persentase[paket.status] ?? 0 };
+}`,
+ refs:['find','progress','create'],
+ lab:{title:'Perbaiki status paket kedua',task:'Di fungsi nilaiProgres, ubah hasil untuk status Terkirim menjadi 100. Pastikan status yang tidak dikenal mengembalikan 0. Coba kedua nomor DO pada pratinjau.',hint:'Cabang Terkirim harus mengembalikan 100; return terakhir menangani status lain.',
+ start:`<h2>Lacak pengiriman demo\x3c/h2>
+<p>Contoh DO: 2023001234 atau 2023005678\x3c/p>
+<form id="lacak"><label>Nomor DO <input id="nomor" required>\x3c/label><button>Lacak\x3c/button>\x3c/form>
+<p id="hasil" role="status">\x3c/p>
+<progress id="bar" aria-label="Progres pengiriman" max="100" value="0">\x3c/progress>
+\x3cscript>
+const data = {'2023001234': 'Dalam perjalanan', '2023005678': 'Terkirim'};
+function nilaiProgres(status) {
+  if (status === 'Dalam perjalanan') return 65;
+  if (status === 'Terkirim') return 65; // TODO
+  return 0;
+}
+document.querySelector('#lacak').addEventListener('submit', e => {
+  e.preventDefault();
+  const no = document.querySelector('#nomor').value.trim();
+  const status = Object.hasOwn(data, no) ? data[no] : undefined;
+  document.querySelector('#hasil').textContent = status ? no + ' · ' + status : 'Nomor DO tidak ditemukan';
+  document.querySelector('#bar').value = nilaiProgres(status);
+});
+<\/script>`,
+ solution:`<h2>Lacak pengiriman demo\x3c/h2>
+<p>Contoh DO: 2023001234 atau 2023005678\x3c/p>
+<form id="lacak"><label>Nomor DO <input id="nomor" required>\x3c/label><button>Lacak\x3c/button>\x3c/form>
+<p id="hasil" role="status">\x3c/p>
+<progress id="bar" aria-label="Progres pengiriman" max="100" value="0">\x3c/progress>
+\x3cscript>
+const data = {'2023001234': 'Dalam perjalanan', '2023005678': 'Terkirim'};
+function nilaiProgres(status) {
+  if (status === 'Dalam perjalanan') return 65;
+  if (status === 'Terkirim') return 100;
+  return 0;
+}
+document.querySelector('#lacak').addEventListener('submit', e => {
+  e.preventDefault();
+  const no = document.querySelector('#nomor').value.trim();
+  const status = Object.hasOwn(data, no) ? data[no] : undefined;
+  document.querySelector('#hasil').textContent = status ? no + ' · ' + status : 'Nomor DO tidak ditemukan';
+  document.querySelector('#bar').value = nilaiProgres(status);
+});
+<\/script>`,
+ tests:`check('Dalam perjalanan bernilai 65', nilaiProgres('Dalam perjalanan') === 65);
+check('Terkirim bernilai 100', nilaiProgres('Terkirim') === 100);
+check('Status tidak dikenal bernilai 0', nilaiProgres('Tidak ada') === 0);
+const form=document.querySelector('#lacak'); document.querySelector('#nomor').value='2023005678'; form.dispatchEvent(new Event('submit',{cancelable:true}));
+check('DO kedua dan progres tampil konsisten', document.querySelector('#hasil').textContent.includes('2023005678') && document.querySelector('#bar').value === 100);`},
+ quiz:[
+ q('DO yang dicari tidak ada, tetapi hasil paket sebelumnya masih terlihat. Apa yang sebaiknya dilakukan?', ['Tetap menampilkan paket lama','Mengisi nomor baru dengan detail paket lama','Mengosongkan hasil lama dan memberi pesan tidak ditemukan','Mengganti semua status menjadi Terkirim'],2,['Hasil lama bisa disalahartikan sebagai hasil pencarian baru.','Menggabungkan nomor dan detail berbeda merusak konsistensi data.','Pesan yang jelas dan penghapusan hasil lama mencegah kebingungan.','Mengubah status tanpa data membuat informasi tidak akurat.'],'Antarmuka harus mencerminkan pencarian terakhir.'),
+ q('Mengapa nomor DO seperti 001234 sebaiknya disimpan sebagai string?', ['Agar dapat dijumlahkan','Agar nol di depan tetap ada','Agar selalu bernilai true','Agar dapat menjadi stylesheet'],1,['DO adalah pengenal, bukan nilai untuk perhitungan.','String mempertahankan bentuk pengenal termasuk nol di depan.','Tujuannya bukan mengubah nilai kebenaran.','Nomor DO tidak berkaitan dengan stylesheet.'],'Pengenal perlu dipertahankan persis seperti bentuk aslinya.')]
+ },
+ {
+ id:6,icon:'stock',tag:'FORM & TABEL',title:'Stok bahan ajar & integrasi',short:'Stok & integrasi',duration:30,range:'18:02–24:18',objective:'Menambahkan data yang valid, merender ulang tabel, dan menguji alur aplikasi.',
+ intro:'Bab terakhir menyatukan input, validasi, data, dan DOM. Penambahan stok baru harus mengubah sumber data sekaligus tampilan.',
+ sections:[
+ {title:'Sumber data lebih dulu, tampilan mengikuti',text:'Simpan buku sebagai array objek. Fungsi render mengosongkan tbody lalu membuat baris untuk setiap objek. Saat menambahkan buku, validasi masukan, push objek ke array, lalu render ulang. Dengan begitu baris tidak terduplikasi.'},
+ {title:'Stok harus masuk akal',text:'Nilai input dibaca sebagai string. Periksa string kosong sebelum konversi Number karena Number(\'\') menghasilkan 0. Terima hanya bilangan bulat yang tidak negatif. Judul dipangkas dengan trim dan harus terisi. Pasang judul dengan textContent.'},
+ {title:'Uji alur, bukan hanya tampilan',text:'Periksa login benar/salah, dua nomor DO serta nomor yang tidak ada, stok kosong/negatif/valid, dan nama file gambar. Array dalam memori hilang ketika reload. Jika ingin persistensi latihan lokal, gunakan localStorage secara sengaja; untuk aplikasi bersama gunakan backend.'}
+ ],
+ visual:[['Validasi','Cek masukan'],['Array','Tambah objek'],['Render','Perbarui tabel']],fact:'Membuat baris DOM tidak otomatis menyimpan data secara permanen. Penyimpanan dalam memori, localStorage, dan database memiliki masa hidup dan kegunaan berbeda.',
+ code:`function tambahBuku(judul, inputStok) {
+  if (!judul.trim() || inputStok.trim() === '') return false;
+  const stok = Number(inputStok);
+  if (!Number.isInteger(stok) || stok < 0) return false;
+  buku.push({ judul: judul.trim(), stok });
+  render();
+  return true;
+}
+function render() {
+  const body = document.querySelector('tbody');
+  body.replaceChildren();
+  for (const item of buku) {
+    const tr = document.createElement('tr');
+    for (const nilai of [item.judul, item.stok]) {
+      const td = document.createElement('td');
+      td.textContent = nilai;
+      tr.append(td);
+    }
+    body.append(tr);
+  }
+}`,
+ refs:['forms','create','text','local','validation'],
+ lab:{title:'Tolak stok yang tidak valid',task:'Ubah fungsi stokValid agar menerima bilangan bulat ≥ 0, menolak angka negatif, pecahan, teks, dan input kosong. Setelah lulus, coba menambah buku melalui form.',hint:'Periksa nilai.trim() !== "" sebelum konversi. Gabungkan Number.isInteger(Number(nilai)) dan Number(nilai) >= 0.',
+ start:`<h2>Stok bahan ajar demo\x3c/h2>
+<form id="tambah">
+<label>Judul <input id="judul" required>\x3c/label>
+<label>Stok <input id="stok" type="number" step="1" min="0" required>\x3c/label>
+<button>Tambah buku\x3c/button>
+\x3c/form>
+<p id="info" role="status">\x3c/p>
+<table><thead><tr><th>Judul\x3c/th><th>Stok\x3c/th>\x3c/tr>\x3c/thead><tbody>\x3c/tbody>\x3c/table>
+\x3cscript>
+const buku = [{judul: 'Dasar Web', stok: 12}];
+function stokValid(nilai) {
+  return nilai.trim() !== ''; // TODO: cek bilangan bulat dan batas nol
+}
+function render() {
+  const body = document.querySelector('tbody');
+  body.replaceChildren();
+  for (const item of buku) {
+    const tr = document.createElement('tr');
+    for (const nilai of [item.judul, item.stok]) {
+      const td = document.createElement('td');
+      td.textContent = nilai; tr.append(td);
+    }
+    body.append(tr);
+  }
+}
+document.querySelector('#tambah').addEventListener('submit', e => {
+  e.preventDefault();
+  const judul = document.querySelector('#judul').value.trim();
+  const stok = document.querySelector('#stok').value;
+  if (!judul || !stokValid(stok)) { document.querySelector('#info').textContent = 'Periksa judul dan stok'; return; }
+  buku.push({judul, stok: Number(stok)}); render();
+  document.querySelector('#info').textContent = 'Buku ditambahkan';
+  e.target.reset();
+});
+render();
+<\/script>`,
+ solution:null,
+ tests:`check('Stok 0 dan 12 diterima', stokValid('0') === true && stokValid('12') === true);
+check('Stok negatif ditolak', stokValid('-1') === false);
+check('Pecahan dan teks ditolak', stokValid('1.5') === false && stokValid('abc') === false);
+check('Kosong dan spasi ditolak', stokValid('') === false && stokValid('  ') === false);
+const form=document.querySelector('#tambah'); const before=document.querySelectorAll('tbody tr').length; document.querySelector('#judul').value='Belajar DOM'; document.querySelector('#stok').value='8'; form.dispatchEvent(new Event('submit',{cancelable:true}));
+check('Buku valid menambah satu baris', document.querySelectorAll('tbody tr').length === before+1);`},
+ quiz:[
+ q('Input stok berisi string kosong. Mengapa tidak cukup hanya memeriksa Number(input) >= 0?', ['Karena Number(\'\') menghasilkan 0','Karena Number selalu menghasilkan string','Karena angka 0 tidak boleh untuk stok','Karena input kosong menjadi 100'],0,['String kosong dikonversi menjadi 0 sehingga perlu pemeriksaan kosong tersendiri.','Number mengonversi nilai menjadi bilangan, bukan string.','Stok nol dapat diterima dalam aturan latihan ini.','String kosong tidak dikonversi menjadi 100.'],'Coba pisahkan pemeriksaan kehadiran nilai dan konversinya.'),
+ q('Buku ditambahkan ke array dalam memori. Setelah reload, data tambahan hilang. Mengapa?', ['CSS menghapus data','Array otomatis tersimpan di database','Halaman menginisialisasi ulang data tanpa penyimpanan persisten','Judul buku terlalu panjang'],2,['CSS mengatur tampilan dan tidak menyimpan array JavaScript.','Array tidak otomatis terhubung ke database.','Reload menjalankan inisialisasi lagi; persistensi harus dibuat secara eksplisit.','Panjang judul tidak menjelaskan hilangnya seluruh perubahan saat reload.'],'Bedakan data yang hidup selama halaman terbuka dengan data tersimpan.')]
+ }
+];
+COURSE[5].lab.solution = COURSE[5].lab.start.replace("return nilai.trim() !== ''; // TODO: cek bilangan bulat dan batas nol", "return nilai.trim() !== '' && Number.isInteger(Number(nilai)) && Number(nilai) >= 0;");
+
+</script>
+<script>
+(() => {
+'use strict';
+const KEY='weblab-sita-offline-v1';
+const $=(s,root=document)=>root.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const paths={
+ structure:'M4 4h16v5H4zM4 13h6v7H4zM14 13h6v7h-6z',
+ palette:'M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 1-3.7c-.8-.6-.5-2 .6-2H17a4 4 0 0 0 4-4c0-4.4-4-8.3-9-8.3ZM7 10h.01M10 6.5h.01M15 6.5h.01M18 10h.01',
+ code:'m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18',
+ login:'M14 3h6v18h-6M3 12h12m-4-4 4 4-4 4',
+ tracking:'M3 6h11v12H3zM14 10h4l3 4v4h-7M7 18a2 2 0 1 0 0 .1M18 18a2 2 0 1 0 0 .1',
+ stock:'m3 7 9-4 9 4-9 4-9-4Zm0 0v10l9 4 9-4V7M12 11v10M7 5l10 4',
+ book:'M3 4h7a3 3 0 0 1 2 1 3 3 0 0 1 2-1h7v15h-7a3 3 0 0 0-2 1 3 3 0 0 0-2-1H3V4Zm9 1v15',
+ clock:'M12 8v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
+ quiz:'m5 12 4 4 10-10M4 3h8M4 21h16M4 3v5M4 16v5',
+ arrow:'M4 12h16m-6-6 6 6-6 6',
+ bulb:'M9 18h6m-5 3h4M8 14a6 6 0 1 1 8 0l-1 4H9l-1-4',
+ shield:'m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Zm-4 9 3 3 5-6'
+};
+const icon=(name)=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.code}"/>\x3c/svg>`;
+let persistent=true;
+let raw={};
+try {raw=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch {persistent=false;}
+let state={chapters:{},last:typeof raw.last==='string'?raw.last:'#/bab/1/materi'};
+for (const c of COURSE){
+ const p=raw.chapters?.[c.id]||{};
+ state.chapters[c.id]={read:p.read===true,lab:p.lab===true,best:Number.isInteger(p.best)?Math.min(2,Math.max(0,p.best)):0,code:typeof p.code==='string'?p.code:c.lab.start,answers:p.answers&&typeof p.answers==='object'?p.answers:{},graded:p.graded&&typeof p.graded==='object'?p.graded:null};
+}
+let current={page:'home'},run=null,runTimeout=null,toastTimer;
+function save(){try {localStorage.setItem(KEY,JSON.stringify(state));}catch {persistent=false;}}
+function summary(){let steps=0,done=0;for(const c of COURSE){const p=state.chapters[c.id];steps+=Number(p.read)+Number(p.lab)+Number(p.best===2);if(p.read&&p.lab&&p.best===2)done++;}return {steps,done,percent:Math.round(steps/18*100)};}
+function isDone(c){const p=state.chapters[c.id];return p.read&&p.lab&&p.best===2;}
+function resume(){const incomplete=COURSE.find(c=>!isDone(c)); if(!incomplete)return '#/bab/6/kuis'; const p=state.chapters[incomplete.id];return `#/bab/${incomplete.id}/${!p.read?'materi':!p.lab?'latihan':'kuis'}`;}
+function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3500);}
+function nav(){
+ $('#chapter-nav').innerHTML=COURSE.map(c=>`<a class="chapter-link ${current.id===c.id?'active':''} ${isDone(c)?'done':''}" href="#/bab/${c.id}/materi" ${current.id===c.id?'aria-current="page"':''}><span class="chapter-number">${isDone(c)?'✓':String(c.id).padStart(2,'0')}\x3c/span><span class="chapter-info"><strong>${esc(c.short)}\x3c/strong><small>${c.duration} menit · ${c.tag==='JAVASCRIPT'?'JavaScript':esc(c.tag.toLowerCase())}\x3c/small>\x3c/span>\x3c/a>`).join('');
+ const s=summary();
+ $('#sidebar-progress').innerHTML=`<div class="progress-label"><span>Perjalananmu\x3c/span><strong>${s.percent}%\x3c/strong>\x3c/div><progress max="18" value="${s.steps}" aria-label="Progres seluruh pembelajaran">\x3c/progress><p>${s.done} dari 6 bab selesai · ${s.steps}/18 langkah\x3c/p>`;
+ document.querySelectorAll('[data-route]').forEach(a=>{const active=(current.page==='home'||current.page==='chapter')?a.dataset.route==='home':a.dataset.route===current.page;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+}
+const breadcrumb=(label)=>`<div class="breadcrumb"><a href="#/">Ruang belajar\x3c/a><span>/\x3c/span><span>${esc(label)}\x3c/span>\x3c/div>`;
+const foot=()=>`<footer class="footnote"><span>WebLab · Materi praktik SITA, disusun ulang untuk pembelajaran mandiri.\x3c/span><span>HTML + CSS + JavaScript DOM\x3c/span>\x3c/footer>`;
+function home(){
+ const s=summary();
+ return `<div class="welcome-line"><p>Ruang untuk mencoba, salah, dan memahami.\x3c/p><span class="edition">EDISI DASAR / 01\x3c/span>\x3c/div>
+ <section class="hero"><div class="hero-copy"><div class="eyebrow"><span>●\x3c/span> LABORATORIUM PEMROGRAMAN WEBSITE\x3c/div><h1>Dari halaman kosong<br>ke <em>aplikasi pertama.\x3c/em>\x3c/h1><p>Pelajari HTML, CSS, dan JavaScript melalui satu studi kasus nyata dari materi: antarmuka pengelolaan bahan ajar SITA.\x3c/p><a class="btn gold" id="start-learning" href="${resume()}">${s.steps?'Lanjut belajar':'Mulai belajar'} ${icon('arrow')}\x3c/a><div class="hero-meta"><span>${icon('book')} 6 bab terarah\x3c/span><span>${icon('code')} Praktik di browser\x3c/span><span>${icon('clock')} ± 160 menit*\x3c/span>\x3c/div>\x3c/div>
+ <div class="hero-art" aria-hidden="true"><div class="orbit">\x3c/div><div class="orbit two">\x3c/div><span class="art-spark">✳\x3c/span><div class="art-browser"><div class="art-toolbar"><i>\x3c/i><i>\x3c/i><i>\x3c/i><span>proyek-pertamaku / index.html\x3c/span>\x3c/div><div class="art-content"><div class="art-side"><b>\x3c/b><b>\x3c/b><b>\x3c/b><b>\x3c/b><b>\x3c/b>\x3c/div><div class="art-code"><div><span class="tag">&lt;main&gt;\x3c/span>\x3c/div><div class="indent">&lt;h1&gt;Halo, web!&lt;/h1&gt;\x3c/div><div class="indent">&lt;p&gt;Mulai dari sini.&lt;/p&gt;\x3c/div><div><span class="tag">&lt;/main&gt;\x3c/span>\x3c/div><div style="margin-top:8px;color:#7e956d">// belajar dengan membangun\x3c/div>\x3c/div>\x3c/div>\x3c/div><span class="art-chip">✓ satu langkah lebih paham\x3c/span>\x3c/div>\x3c/section>
+ <div class="stats"><div class="stat"><div class="stat-icon">${icon('book')}\x3c/div><div><strong>06\x3c/strong><span>Modul berurutan\x3c/span>\x3c/div>\x3c/div><div class="stat"><div class="stat-icon">${icon('code')}\x3c/div><div><strong>06\x3c/strong><span>Lab kode interaktif\x3c/span>\x3c/div>\x3c/div><div class="stat"><div class="stat-icon">${icon('quiz')}\x3c/div><div><strong>12\x3c/strong><span>Soal + penjelasan\x3c/span>\x3c/div>\x3c/div>\x3c/div>
+ ${s.done===6?'<div class="complete-banner"><h2>Enam bab, satu fondasi yang kuat. ✳\x3c/h2><p>Semua langkah sudah selesai. Uji kembali alurnya atau lanjutkan ke tantangan integrasi di Panduan.\x3c/p>\x3c/div>':''}
+ <section aria-labelledby="course-title"><div class="section-title"><div><h2 id="course-title">Bangun pemahaman, bab demi bab.\x3c/h2><p>Baca konsepnya. Coba kodenya. Uji pemahamanmu.\x3c/p>\x3c/div><span class="small-badge">${s.done}/6 selesai\x3c/span>\x3c/div><div class="course-grid">${COURSE.map(c=>`<a class="course-card" href="#/bab/${c.id}/materi"><div class="card-body"><div class="card-top"><span class="card-icon">${icon(c.icon)}\x3c/span><span class="chapter-kicker">BAB ${String(c.id).padStart(2,'0')}\x3c/span>\x3c/div><h3>${esc(c.title)}\x3c/h3><p>${esc(c.objective)}\x3c/p>\x3c/div><div class="card-footer"><span>${c.duration} menit · ${isDone(c)?'✓ Selesai':state.chapters[c.id].read||state.chapters[c.id].lab||state.chapters[c.id].best?'Sedang dipelajari':'Siap dipelajari'}\x3c/span><span class="arrow">↗\x3c/span>\x3c/div>\x3c/a>`).join('')}\x3c/div>\x3c/section>
+ <div class="home-bottom">${icon('bulb')}<p><strong>Tidak perlu menyiapkan editor untuk mulai.\x3c/strong>Semua lab berjalan langsung di browser. Progres tersimpan pada browser dan perangkat ini.\x3c/p><a class="text-link" href="#/panduan">Cara belajar <span>↗\x3c/span>\x3c/a>\x3c/div>
+ <p style="font-size:9px;color:var(--muted);margin:12px 0">*Perkiraan waktu belajar, bukan durasi video. Bebas belajar sesuai ritmemu.\x3c/p>${foot()}`;
+}
+function target(c){const p=state.chapters[c.id];const n=Number(p.read)+Number(p.lab)+Number(p.best===2);return `<aside class="step-aside"><div class="target-card"><div class="eyebrow">TARGET BAB INI\x3c/div><p>${esc(c.objective)}\x3c/p><div class="milestones">${[['Materi dibaca',p.read],['Latihan lulus',p.lab],['Kuis 2/2 benar',p.best===2]].map(([t,d])=>`<div class="milestone ${d?'done':''}"><span class="circle">${d?'✓':' '}\x3c/span>${t}\x3c/div>`).join('')}\x3c/div><div class="progress-label"><span>${isDone(c)?'Bab selesai':'Langkah selesai'}\x3c/span><strong>${n}/3\x3c/strong>\x3c/div><progress value="${n}" max="3" aria-label="Progres bab ${c.id}">\x3c/progress>\x3c/div><div class="aside-note"><strong>BERANGKAT DARI MATERI\x3c/strong>Transkrip video<br>${esc(c.range)}<br><a href="https://www.youtube.com/watch?v=0CMyC-Dkd5I&t=${[70,183,417,323,809,1082][c.id-1]}s" target="_blank" rel="noopener noreferrer">Buka sumber video ↗\x3c/a>${c.refs.slice(0,2).map(id=>{const r=REFERENCES.find(x=>x.id===id);return `<a href="${r.url}" target="_blank" rel="noopener noreferrer">${esc(r.title)} ↗\x3c/a>`;}).join('')}\x3c/div>\x3c/aside>`;}
+function chapter(c,tab){const p=state.chapters[c.id];return `${breadcrumb(`Bab ${String(c.id).padStart(2,'0')}`)}<header class="page-heading"><div class="eyebrow">BAB ${String(c.id).padStart(2,'0')} / ENAM LANGKAH\x3c/div><h1>${esc(c.title)}\x3c/h1><p>${esc(c.intro)}\x3c/p>\x3c/header><div class="chapter-meta"><span class="tag-pill">${c.tag}\x3c/span><span>◷ ${c.duration} menit belajar\x3c/span><span>↗ Sumber ${esc(c.range)}\x3c/span>\x3c/div><nav class="lesson-tabs" aria-label="Bagian bab">${[['materi','Materi',p.read],['latihan','Lab kode',p.lab],['kuis','Kuis',p.best===2]].map(([t,l,d])=>`<a href="#/bab/${c.id}/${t}" ${t===tab?'class="active" aria-current="page"':''}>${l} ${d?'<span>✓\x3c/span>':''}\x3c/a>`).join('')}\x3c/nav>${tab==='materi'?reading(c):tab==='latihan'?lab(c):quiz(c)}${foot()}`;}
+function reading(c){const p=state.chapters[c.id];return `<div class="lesson-layout"><article class="lesson-article"><div class="flow" aria-label="Peta konsep">${c.visual.map(([a,b])=>`<div class="flow-item"><strong>${esc(a)}\x3c/strong><span>${esc(b)}\x3c/span>\x3c/div>`).join('')}\x3c/div>${c.sections.map((s,i)=>`<section class="lesson-section"><h2>${String(i+1).padStart(2,'0')}. ${esc(s.title)}\x3c/h2><p>${esc(s.text)}\x3c/p>\x3c/section>`).join('')}<div class="callout"><strong>◇ CATATAN KONSEP\x3c/strong>${esc(c.fact)}\x3c/div><section class="lesson-section"><h2>↳ Contoh kode untuk dipelajari\x3c/h2><p>Telusuri alur kodenya, lalu kerjakan perubahan kecil di Lab kode.\x3c/p><div class="code-example"><div class="code-top"><span>CONTOH / ${c.tag}\x3c/span><button data-action="copy">Salin kode\x3c/button>\x3c/div><pre><code>${esc(c.code)}\x3c/code>\x3c/pre>\x3c/div>\x3c/section><div class="lesson-actions"><button class="btn ${p.read?'secondary':''}" data-action="read">${p.read?'✓ Materi sudah dibaca':'Tandai materi dibaca'}\x3c/button><a class="btn gold" href="#/bab/${c.id}/latihan">Buka Lab kode ${icon('arrow')}\x3c/a>\x3c/div>\x3c/article>${target(c)}\x3c/div>`;}
+function lab(c){const p=state.chapters[c.id];return `<div class="lab-intro"><span class="card-icon">${icon('code')}\x3c/span><div><h2>${esc(c.lab.title)}\x3c/h2><p>${esc(c.lab.task)}\x3c/p>\x3c/div>\x3c/div><div class="lab-toolbar"><button class="btn" id="run-code" data-action="run">▶ Jalankan & periksa\x3c/button><div class="lab-tools"><button class="btn secondary small" data-action="reset-code">Pulihkan kode\x3c/button><button class="btn secondary small" data-action="download-code">Unduh .html\x3c/button>\x3c/div>\x3c/div><div class="sandbox-grid"><section class="editor-pane" aria-label="Editor kode"><div class="pane-title"><span>LATIHAN-${String(c.id).padStart(2,'0')}.HTML\x3c/span><small>DAPAT DIEDIT\x3c/small>\x3c/div><div class="editor-wrap"><div class="line-numbers" aria-hidden="true" id="line-numbers">\x3c/div><textarea id="code-editor" aria-label="Kode latihan bab ${c.id}" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off">${esc(p.code)}\x3c/textarea>\x3c/div>\x3c/section><section class="preview-pane" aria-label="Hasil kode"><div class="pane-title"><span>PRATINJAU BROWSER\x3c/span><small>◉ SANDBOX\x3c/small>\x3c/div><iframe id="preview-frame" title="Pratinjau latihan bab ${c.id}" sandbox="allow-scripts allow-forms" referrerpolicy="no-referrer">\x3c/iframe>\x3c/section>\x3c/div><div class="lab-help"><span>Tab: 2 spasi · Ctrl/⌘ + Enter: jalankan\x3c/span><span>Draf tersimpan ${persistent?'di browser ini':'selama halaman terbuka'} · ${p.lab?'✓ Latihan pernah lulus':'belum lulus'}\x3c/span>\x3c/div><div class="lab-results" id="lab-results" role="status" aria-live="polite"><h3>Hasil pemeriksaan\x3c/h3><p>Jalankan kode untuk melihat pemeriksaan perilaku dan pesan error.\x3c/p>\x3c/div><details class="lab-hint"><summary>Butuh petunjuk?\x3c/summary><p>${esc(c.lab.hint)}\x3c/p>\x3c/details><details class="lab-hint"><summary>Bandingkan dengan solusi\x3c/summary><p>Coba sendiri terlebih dahulu. Solusi bisa dipelajari dan dijalankan kembali; langkah ini bukan ujian resmi.\x3c/p><div class="code-example"><pre><code>${esc(c.lab.solution)}\x3c/code>\x3c/pre>\x3c/div><button class="btn secondary small" data-action="solution">Gunakan solusi di editor\x3c/button>\x3c/details><div class="lesson-actions"><a class="btn secondary" href="#/bab/${c.id}/materi">← Kembali ke materi\x3c/a><a class="btn gold" href="#/bab/${c.id}/kuis">Uji pemahaman ${icon('arrow')}\x3c/a>\x3c/div>`;}
+function quiz(c){const p=state.chapters[c.id];const graded=p.graded;const score=graded?c.quiz.filter((q,i)=>Number(graded[i])===q.correct&&graded[i]!==undefined).length:null;return `<div class="quiz-intro"><div><h2>Sudah sejauh apa pemahamanmu?\x3c/h2><p>Dua pertanyaan. Pilih satu jawaban, lalu periksa alasannya.\x3c/p>\x3c/div><div class="quiz-score" aria-label="Nilai terbaik">${p.best}<span style="font-size:12px;color:var(--muted)"> / 2\x3c/span>\x3c/div>\x3c/div><form id="quiz-form">${c.quiz.map((q,i)=>{const chosen=p.answers[i];const checked=graded?.[i];const hasGrade=graded&&checked!==undefined;const correct=hasGrade&&Number(checked)===q.correct;return `<fieldset class="question-card"><legend><span>PERTANYAAN ${String(i+1).padStart(2,'0')}\x3c/span>${esc(q.question)}\x3c/legend><div class="question-options">${q.options.map((opt,j)=>`<label class="option ${String(chosen)===String(j)?'chosen':''} ${hasGrade&&Number(checked)===j?(j===q.correct?'correct':'wrong'):''}"><input type="radio" name="q${i}" value="${j}" ${String(chosen)===String(j)?'checked':''}><span class="option-letter">${'ABCD'[j]}\x3c/span><span>${esc(opt)}\x3c/span>\x3c/label>`).join('')}\x3c/div>${hasGrade?`<div class="feedback ${correct?'':'wrong'}"><strong>${correct?'✓ Pemahamanmu tepat':'↳ Mari periksa lagi'}\x3c/strong>${esc(q.feedback[Number(checked)])}${correct?'':`<br>Jawaban ${'ABCD'[q.correct]}: ${esc(q.feedback[q.correct])}`}\x3c/div>`:''}<details class="quiz-hint"><summary>Lihat petunjuk\x3c/summary><p>${esc(q.hint)}\x3c/p>\x3c/details>\x3c/fieldset>`;}).join('')}<p class="inline-message" id="quiz-message" role="alert">\x3c/p>${graded?`<div class="quiz-summary">${icon(score===2?'quiz':'bulb')}<p><strong>${score===2?'Dua konsep sudah kamu kuasai.':`${score}/2 benar pada pemeriksaan terakhir.`}\x3c/strong>${score===2?'Lanjutkan ke bab berikutnya atau coba kuis kembali.':'Baca penjelasan, ubah pilihan, lalu periksa kembali. Nilai terbaik tetap disimpan.'}\x3c/p>\x3c/div>`:''}<div class="quiz-actions"><button class="btn" type="submit">Periksa jawaban\x3c/button>${graded?'<button type="button" class="btn secondary" data-action="retry">Ulangi kuis\x3c/button>':''}\x3c/div>\x3c/form><p style="font-size:10px;color:var(--muted)">Nilai terbaik: ${p.best}/2. Bab selesai jika materi dibaca, lab lulus, dan nilai terbaik kuis 2/2.\x3c/p><div class="lesson-actions"><a class="btn secondary" href="#/bab/${c.id}/latihan">← Kembali ke Lab\x3c/a><a class="btn gold" href="${c.id<6?`#/bab/${c.id+1}/materi`:'#/'}">${c.id<6?'Bab berikutnya':'Lihat progres akhir'} ${icon('arrow')}\x3c/a>\x3c/div>`;}
+function references(){return `${breadcrumb('Referensi')}<header class="page-heading"><div class="eyebrow">BELAJAR DARI SUMBERNYA\x3c/div><h1>Konsep yang bisa ditelusuri.\x3c/h1><p>Materi praktik diadaptasi dari TXT yang diberikan. Dokumentasi berikut memverifikasi konsep teknis dan memberi ruang untuk belajar lebih jauh.\x3c/p>\x3c/header><div class="source-box"><div class="eyebrow">SUMBER MATERI UTAMA\x3c/div><p><strong>0CMyC-Dkd5I.txt\x3c/strong> · Transkrip demonstrasi tugas praktik antarmuka SITA. Cakupan sumber: HTML, CSS, JavaScript DOM, login, dashboard, tracking DO, dan stok. Contoh kode portal disusun ulang; data yang dipakai adalah simulasi.\x3c/p><a href="https://www.youtube.com/watch?v=0CMyC-Dkd5I" target="_blank" rel="noopener noreferrer">Lihat video yang tercantum dalam TXT ↗\x3c/a>\x3c/div><p style="font-size:11px;color:var(--muted)">Keempat belas tautan dokumentasi MDN dan OWASP diperiksa kembali pada 23 Oktober 2026. Tautan terbuka pada tab baru dan umumnya berbahasa Inggris. Sumber video diidentifikasi dari TXT; rincian bibliografi yang hanya disebut lisan tidak dijadikan referensi akademik terverifikasi.\x3c/p><div class="refs-grid">${REFERENCES.map(r=>`<a class="reference-card" href="${r.url}" target="_blank" rel="noopener noreferrer"><div class="ref-org"><span>${esc(r.org)}\x3c/span><span>↗\x3c/span>\x3c/div><h2>${esc(r.title)}\x3c/h2><p>${esc(r.note)}\x3c/p><div class="ref-domain">${new URL(r.url).hostname}\x3c/div>\x3c/a>`).join('')}\x3c/div>${foot()}`;}
+function guide(){return `${breadcrumb('Panduan')}<header class="page-heading"><div class="eyebrow">CARA MENGGUNAKAN WEBLAB\x3c/div><h1>Sedikit teori. Banyak mencoba.\x3c/h1><p>Portal ini adalah ruang belajar mandiri untuk mahasiswa pemula. Unduh file HTML ini, lalu klik dua kali untuk membukanya di Chrome, Edge, atau Firefox. Tidak perlu instalasi atau koneksi internet untuk materi, latihan, dan kuis.\x3c/p>\x3c/header><section class="guide-block"><h2>Tiga langkah untuk setiap bab\x3c/h2><ol><li><strong>Baca materi.\x3c/strong> Ikuti peta konsep, telusuri kode, lalu klik “Tandai materi dibaca”.\x3c/li><li><strong>Kerjakan Lab kode.\x3c/strong> Ubah baris TODO, jalankan, dan periksa hasil. Semua pemeriksaan harus lulus agar langkah latihan tercatat.\x3c/li><li><strong>Kerjakan kuis.\x3c/strong> Jawab kedua pertanyaan lalu periksa. Baca penjelasan dan coba kembali hingga nilai terbaik 2/2.\x3c/li>\x3c/ol><p>Setiap langkah menyumbang 1 dari 18 langkah total. Bab tuntas setelah tiga langkahnya selesai. Semua bab bisa dibuka; kamu bebas mengulang tanpa kehilangan pencapaian terbaik.\x3c/p>\x3c/section><section class="guide-block"><h2>Progresmu, di perangkatmu\x3c/h2><p>Progres, nilai terbaik, pilihan kuis, dan draf kode disimpan menggunakan <strong>localStorage\x3c/strong> pada browser dan perangkat ini. Reload tidak menghapusnya jika penyimpanan browser tersedia. Mode privat, pembersihan data situs, perpindahan browser, atau pemindahan file dapat menghilangkan progres. Penyimpanan file lokal mengikuti izin browser; gunakan Ekspor progres untuk menyimpan catatan pencapaian. Tidak ada sinkronisasi akun atau panel nilai dosen pada versi ini.\x3c/p><p>Ekspor salinan progres bila ingin menyimpan catatan pencapaian. Fitur impor belum tersedia.\x3c/p><div class="data-tools"><button class="btn secondary" data-action="export">↓ Ekspor progres (.json)\x3c/button><button class="btn ghost danger" data-action="reset-progress">Atur ulang progres\x3c/button>\x3c/div>\x3c/section><section class="guide-block"><h2>Dari lab ke proyek di laptop\x3c/h2><p>Latihan memakai cuplikan HTML mandiri supaya langsung berjalan. Saat membuat proyek utuh, pisahkan file menjadi empat halaman HTML, css/style.css, js/data.js, js/script.js, dan folder img. Muat data sebelum logika aplikasi. Gunakan server pengembangan lokal dari editor untuk memeriksa path, Console, dan Network.\x3c/p><p>Contoh sessionStorage dalam materi dapat dicoba pada proyek lokal biasa. Sandbox lab mengisolasi kode dan tidak memberikan akses ke penyimpanan portal. “Unduh .html” mengambil kode editor saat ini; hasil eksperimen lab kembali ke awal setiap kali dijalankan.\x3c/p>\x3c/section><section class="guide-block"><h2>Tantangan akhir: sambungkan alurnya\x3c/h2><p>Gunakan konsep enam bab untuk membangun ulang antarmuka SITA di editor. Checklist ini adalah panduan latihan mandiri, bukan pemeriksaan otomatis tambahan.\x3c/p><ul class="checklist"><li><span>01\x3c/span> Empat halaman saling terhubung dan judulnya semantik.\x3c/li><li><span>02\x3c/span> CSS bersama nyaman pada desktop dan seluler.\x3c/li><li><span>03\x3c/span> Login demo menolak email atau sandi yang salah.\x3c/li><li><span>04\x3c/span> Dashboard memiliki sapaan, menu, dan ringkasan data.\x3c/li><li><span>05\x3c/span> Tracking menangani dua DO dan nomor yang tidak ada.\x3c/li><li><span>06\x3c/span> Form stok menolak input kosong, negatif, dan pecahan.\x3c/li>\x3c/ul><p>Pengayaan: buat timeline pengiriman dengan createElement dan modal detail buku dengan dialog. Uji melalui keyboard. Catat apa yang hilang setelah reload dan tentukan data yang perlu disimpan.\x3c/p>\x3c/section><section class="guide-block"><h2>Konteks pembelajaran\x3c/h2><p>WebLab adalah materi pendamping independen berdasarkan transkrip yang diberikan, bukan layanan resmi Universitas Terbuka. Data buku, akun, dan pengiriman di lab dibuat untuk latihan. Login JavaScript di sini mempelajari alur interaksi; aplikasi nyata memerlukan autentikasi dan validasi di server.\x3c/p><p>Versi HTML ini dapat dibuka langsung tanpa login. Seluruh materi, lab kode, dan kuis tersedia dalam file ini. Internet hanya diperlukan untuk membuka tautan referensi dan video. Salinan HTML tidak memakai pembatasan akses portal privat Sites.\x3c/p><a class="text-link" href="#/referensi">Telusuri referensi resmi ↗\x3c/a>\x3c/section>${foot()}`;}
+function render(keepScroll=false){
+ run=null;clearTimeout(runTimeout);
+ const parts=location.hash.replace(/^#\/?/,'').split('/');
+ if(parts[0]==='bab'&&COURSE.some(c=>c.id===Number(parts[1]))){current={page:'chapter',id:Number(parts[1]),tab:['materi','latihan','kuis'].includes(parts[2])?parts[2]:'materi'};state.last=`#/bab/${current.id}/${current.tab}`;save();}
+ else current={page:['referensi','panduan'].includes(parts[0])?parts[0]:'home'};
+ const c=COURSE.find(x=>x.id===current.id);
+ $('#main').innerHTML=(!persistent?'<div class="storage-warning" role="status">Penyimpanan browser tidak tersedia. Progres hanya bertahan selama halaman ini terbuka; gunakan ekspor sebelum menutup.\x3c/div>':'')+(current.page==='chapter'?chapter(c,current.tab):current.page==='referensi'?references():current.page==='panduan'?guide():home());
+ document.title=current.page==='chapter'?`Bab ${c.id}: ${c.title} — WebLab`:current.page==='referensi'?'Referensi — WebLab':current.page==='panduan'?'Panduan — WebLab':'WebLab — Pemrograman Website';
+ nav();closeMenu();
+ if(current.tab==='latihan')initEditor();
+ if(!keepScroll){window.scrollTo({top:0,behavior:'instant'});$('#main').focus({preventScroll:true});}
+}
+function lineNumbers(){const ed=$('#code-editor');if(!ed)return;$('#line-numbers').textContent=Array.from({length:ed.value.split('\n').length},(_,i)=>i+1).join('\n');$('#line-numbers').scrollTop=ed.scrollTop;}
+function initEditor(){const ed=$('#code-editor');lineNumbers();ed.addEventListener('input',()=>{state.chapters[current.id].code=ed.value;save();lineNumbers();});ed.addEventListener('scroll',()=>{$('#line-numbers').scrollTop=ed.scrollTop;});ed.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();const start=ed.selectionStart;const end=ed.selectionEnd;ed.setRangeText('  ',start,end,'end');ed.dispatchEvent(new Event('input'));}if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();runCode();}});$('#preview-frame').srcdoc='<html lang="id"><body style="font:13px/1.8 system-ui;color:#6b7a6d;padding:25px"><p style="font-size:25px">↳\x3c/p>Hasil kodenya akan muncul di sini.<br>Ubah editor lalu klik <strong>Jalankan &amp; periksa\x3c/strong>.\x3c/body>\x3c/html>';}
+function runCode(){
+ const c=COURSE.find(x=>x.id===current.id);const ed=$('#code-editor');if(!c||!ed)return;
+ clearTimeout(runTimeout);const runId=String(Date.now())+'-'+Math.random().toString(36).slice(2);run={id:runId,chapter:c.id};state.chapters[c.id].code=ed.value;save();
+ $('#run-code').disabled=true;$('#run-code').textContent='Memeriksa…';
+ $('#lab-results').innerHTML='<h3>Menjalankan kode…\x3c/h3><p>Memeriksa hasil di lingkungan latihan.\x3c/p>';
+ const bootstrap=`\x3cscript>window.__labErrors=[];window.addEventListener('error',e=>window.__labErrors.push(e.message));window.addEventListener('unhandledrejection',e=>window.__labErrors.push(String(e.reason)));<\/script>`;
+ const testScript=`\x3cscript>window.addEventListener('load',()=>{setTimeout(()=>{const results=[];const check=(label,ok)=>results.push({label,pass:!!ok});try{${c.lab.tests}}catch(e){results.push({label:'Error: '+e.message,pass:false});}for(const msg of window.__labErrors){results.push({label:'JavaScript: '+msg,pass:false});}parent.postMessage({type:'weblab-result',runId:${JSON.stringify(runId)},results},'*');},80);});<\/script>`;
+ const base=`<!doctype html><html lang="id"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:13px/1.7 system-ui;color:#233d32;padding:20px;margin:0}h1{font-size:24px}h2{font-size:18px}label{display:block;margin:12px 0}input{display:block;width:calc(100% - 20px);padding:9px;border:1px solid #c7d1c2;border-radius:5px;margin-top:4px;font:inherit}button{padding:9px 15px;border:0;background:#173c36;color:white;border-radius:5px;cursor:pointer}table{border-collapse:collapse;width:100%;margin-top:20px}td,th{border-bottom:1px solid #dce1d5;padding:9px;text-align:left}progress{width:100%;accent-color:#173c36}code{font-family:monospace}\x3c/style>${bootstrap}\x3c/head><body>`;
+ $('#preview-frame').srcdoc=base+ed.value+testScript+'\x3c/body>\x3c/html>';
+ runTimeout=setTimeout(()=>{if(run?.id!==runId)return;$('#run-code').disabled=false;$('#run-code').textContent='▶ Jalankan & periksa';$('#lab-results').innerHTML='<h3>Pemeriksaan belum selesai\x3c/h3><p>Periksa tag script yang belum ditutup atau kode yang berhenti sebelum selesai, lalu jalankan kembali.\x3c/p>';run=null;},5000);
+}
+window.addEventListener('message',e=>{
+ if(!run||e.source!==$('#preview-frame')?.contentWindow||e.data?.type!=='weblab-result'||e.data.runId!==run.id||!Array.isArray(e.data.results))return;
+ clearTimeout(runTimeout);const results=e.data.results;const pass=results.length>0&&results.every(r=>r.pass===true);const c=COURSE.find(x=>x.id===run.chapter);
+ if(pass){state.chapters[c.id].lab=true;save();nav();}
+ $('#run-code').disabled=false;$('#run-code').textContent='▶ Jalankan & periksa';
+ $('#lab-results').innerHTML=`<h3>${pass?'✓ Semua pemeriksaan lulus':`↳ ${results.filter(r=>r.pass).length}/${results.length} pemeriksaan lulus`}\x3c/h3>${results.map(r=>`<div class="test-result ${r.pass?'pass':'fail'}"><span>${r.pass?'✓':'×'}\x3c/span><span>${esc(r.label)}\x3c/span>\x3c/div>`).join('')}${pass?'<p style="margin-top:9px">Langkah latihan tersimpan. Coba interaksinya pada pratinjau atau lanjutkan ke kuis.\x3c/p>':''}`;
+ const help=$('.lab-help');if(pass&&help)help.lastElementChild.textContent='Draf tersimpan di browser ini · ✓ Latihan pernah lulus';run=null;
+});
+function download(name,text,type='text/plain'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function closeMenu(){$('#sidebar').classList.remove('open');$('#scrim').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');}
+$('#menu-toggle').addEventListener('click',()=>{const open=!$('#sidebar').classList.contains('open');$('#sidebar').classList.toggle('open',open);$('#scrim').classList.toggle('open',open);$('#menu-toggle').setAttribute('aria-expanded',String(open));});$('#scrim').addEventListener('click',closeMenu);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+document.addEventListener('click',async e=>{
+ if(e.target.closest('.skip')){e.preventDefault();$('#main').focus();$('#main').scrollIntoView({block:'start'});return;}
+ const b=e.target.closest('[data-action]');if(!b)return;
+ const c=COURSE.find(x=>x.id===current.id);const p=c?state.chapters[c.id]:null;
+ switch(b.dataset.action){
+ case 'read':p.read=true;save();nav();b.classList.add('secondary');b.textContent='✓ Materi sudah dibaca';$('.step-aside').outerHTML=target(c);toast('Materi ditandai dibaca. Lanjutkan ke Lab kode.');break;
+ case 'run':runCode();break;
+ case 'reset-code':$('#code-editor').value=c.lab.start;$('#code-editor').dispatchEvent(new Event('input'));toast('Kode awal dipulihkan. Pencapaian terbaik tetap tersimpan.');break;
+ case 'solution':$('#code-editor').value=c.lab.solution;$('#code-editor').dispatchEvent(new Event('input'));$('#code-editor').focus();toast('Solusi ada di editor. Jalankan untuk memeriksanya.');break;
+ case 'download-code':download(`weblab-bab-${c.id}.html`,'<!doctype html>\n<html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Latihan WebLab\x3c/title><body>\n'+$('#code-editor').value+'\n\x3c/body>\x3c/html>','text/html');break;
+ case 'copy':try{await navigator.clipboard.writeText(c.code);toast('Contoh kode disalin.');}catch{toast('Pilih teks pada contoh, lalu salin dengan Ctrl/⌘ + C.');}break;
+ case 'retry':p.answers={};p.graded=null;save();render(true);toast('Kuis siap diulang. Nilai terbaik tetap disimpan.');break;
+ case 'export':download('weblab-progres.json',JSON.stringify({portal:'WebLab SITA',exportedAt:new Date().toISOString(),summary:summary(),chapters:COURSE.map(x=>({bab:x.id,judul:x.title,materiDibaca:state.chapters[x.id].read,latihanLulus:state.chapters[x.id].lab,nilaiTerbaik:state.chapters[x.id].best,selesai:isDone(x)}))},null,2),'application/json');toast('Catatan progres diunduh.');break;
+ case 'reset-progress':$('#dialog-root').innerHTML='<dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Mulai dari awal?\x3c/h2><p>Semua progres, nilai kuis, dan draf kode pada browser ini akan dihapus. Ekspor progres lebih dahulu jika ingin menyimpan catatan.\x3c/p><div class="data-tools"><button class="btn secondary" data-action="cancel-reset" autofocus>Batal\x3c/button><button class="btn" data-action="confirm-reset">Hapus & mulai ulang\x3c/button>\x3c/div>\x3c/dialog>';$('#reset-dialog').showModal();break;
+ case 'cancel-reset':$('#reset-dialog').close();break;
+ case 'confirm-reset':for(const x of COURSE)state.chapters[x.id]={read:false,lab:false,best:0,code:x.lab.start,answers:{},graded:null};save();$('#reset-dialog').close();render(true);toast('Progres diatur ulang. Siap untuk mulai lagi.');break;
+ }
+});
+document.addEventListener('change',e=>{if(current.tab!=='kuis'||!e.target.matches('input[type="radio"]'))return;const i=Number(e.target.name.slice(1));state.chapters[current.id].answers[i]=Number(e.target.value);save();document.querySelectorAll(`[name="q${i}"]`).forEach(x=>x.closest('label').classList.toggle('chosen',x.checked));});
+document.addEventListener('submit',e=>{if(e.target.id!=='quiz-form')return;e.preventDefault();const c=COURSE.find(x=>x.id===current.id),p=state.chapters[c.id];if(c.quiz.some((q,i)=>![0,1,2,3].includes(Number(p.answers[i]))||p.answers[i]===undefined)){$('#quiz-message').textContent='Jawab kedua pertanyaan sebelum memeriksa.';$('#quiz-message').scrollIntoView({block:'center',behavior:'smooth'});return;}p.graded={...p.answers};const score=c.quiz.filter((q,i)=>Number(p.answers[i])===q.correct).length;p.best=Math.max(p.best,score);save();render(true);$('.quiz-summary').scrollIntoView({block:'center',behavior:'smooth'});});
+window.addEventListener('hashchange',()=>render());
+render(true);
+})();
+
+</script>
+</body>
+</html>
